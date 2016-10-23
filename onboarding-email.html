@@ -198,6 +198,7 @@
 
         .plan {
           border: 1px solid #ccc;
+          border-radius: 3px;
         }
         .plan table td {
           display: table-cell;
@@ -205,12 +206,29 @@
 
         .platinum {
           background-color: #b5f3d4;
+          border-color: #b5f3d4;
         }
+        
+        .title-platinum {
+          border-bottom: 6px solid #83e0b2 !important;
+        }
+
         .silver {
           background-color: #dbdcf0;
+          border-color: #dbdcf0;
         }
+
+        .title-silver {
+          border-bottom: 6px solid #c4c5e6 !important;
+        }
+
         .bronze {
           background-color: #f79f49;
+          border-color: #f79f49;
+        }
+
+        .title-bronze {
+          border-bottom: 6px solid #e48425 !important;
         }
         .title {
           border-bottom: 1px solid #ccc; }
@@ -218,8 +236,10 @@
             font-size: 15px;
             font-weight: bold;
             color: #444;
-            margin: 5px auto; }
+            margin: 5px auto 0; }
           .title p {
+            color: #5d5d5d;
+            margin-bottom: 9px;
             text-align: center;
             font-style: italic;
             font-size: 12px }
@@ -341,7 +361,7 @@
                                     <tr>
                                       <td>
                                         <div class="plan platinum">
-                                          <div class="title">
+                                          <div class="title title-platinum">
                                             <h1>platinum plan</h1>
                                             <p>engage: once a week</p>
                                           </div>
@@ -388,7 +408,7 @@
                                     <tr>
                                       <td>
                                         <div class="plan silver">
-                                          <div class="title">
+                                          <div class="title title-silver">
                                             <h1>platinum plan</h1>
                                             <p>engage: once a week</p>
                                           </div>
@@ -435,7 +455,7 @@
                                     <tr>
                                       <td>
                                         <div class="plan bronze">
-                                          <div class="title">
+                                          <div class="title title-bronze">
                                             <h1>platinum plan</h1>
                                             <p>engage: once a week</p>
                                           </div>

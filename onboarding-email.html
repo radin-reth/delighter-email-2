@@ -115,8 +115,6 @@
       .btn {
         box-sizing: border-box;
         width: 100%; }
-        .btn > tbody > tr > td {
-          padding-bottom: 15px; }
         .btn table {
           width: auto; }
         .btn table td {
@@ -201,6 +199,10 @@
         .plan {
           border: 1px solid #ccc;
         }
+        .plan table td {
+          display: table-cell;
+        }
+
         .platinum {
           background-color: #b5f3d4;
         }
@@ -229,14 +231,72 @@
         .box {
           padding: 15px; }
 
+        .what-next,
+        .question {
+          font-size: 15px;
+          margin: 15px 0 0;
+        }
+
+        li {
+          list-style: none;
+        }
+
+        li.asterisk {
+          position: relative;
+        }
+
+        li.asterisk:before {
+          content: "*";
+          position: absolute;
+          left: -15px;
+          top: 3px;
+        }
+        .clear-space {
+          margin: 0;
+          padding: 0;
+        }
+
+        .terms {
+          font-size: 12px;
+        }
+
+        .terms, .social {
+          list-style: none }
+          .terms li, .social li {
+            display: inline-block; }
+
+        .footer {
+          background: transparent;
+          margin-top: 15px;
+          padding: 0;
+        }
+
+        .footer ul {
+          text-align: left;
+        }
+
+        .social img {
+          width: 17px;
+        }
+
         @media only screen and (min-width: 768px) {
           .silver-wrapper {
             padding: 0 15px;
           }
         }
+
+        @media only screen and (max-width: 768px) {
+          .footer .social, .footer .terms {
+            text-align: center;
+          }
+
+          .footer .social {
+            margin-top: 10px;
+          }
+        }
     </style>
   </head>
-  <body class="">
+  <body>
     <table border="0" cellpadding="0" cellspacing="0">
       <tr>
         <td>&nbsp;</td>
@@ -417,16 +477,16 @@
                               <table border="0" cellpadding="0" cellspacing="0" class="btn btn-primary box">
                                 <tbody>
                                   <tr>
-                                    <td><h5>what next?</h5></td>
+                                    <td><h5 class="what-next">What next?</h5></td>
                                   </tr>
                                   <tr>
                                     <td>
                                       <ul>
-                                        <li>
-                                          <p><a href="#">watch a video on hwo to use delighterr</a></p>
+                                        <li class="asterisk">
+                                          <a href="#">Watch a video on hwo to use delighterr</a>
                                         </li>
-                                        <li>
-                                          <p>check daily planned and recommended actions for all your contacts from plug in MENU icon. we will also send you a daily reminder</p>
+                                        <li class="asterisk">
+                                          <span>Check daily planned and recommended actions for all your contacts from plug in MENU icon. we will also send you a daily reminder</span>
                                         </li>
                                       </ul>
                                     </td>
@@ -434,7 +494,7 @@
 
                                   <tr>
                                     <td>
-                                      <h5>Got Questions or Feedback</h5>
+                                      <h5 class="question">Got Questions or Feedback</h5>
                                     </td>
                                   </tr>
                                   <tr>
@@ -445,25 +505,20 @@
                                     </td>
                                   </tr>
                                   <tr>
-                                    <td><p>Good luck! Hope it works.</p></td>
+                                    <td><span>Thanks and welcome again!</span></td>
                                   </tr>
                                   <tr>
-                                    <td><p>Thanks and welcome again!</p></td>
+                                    <td>
+                                      <p>Baker</p>
+                                    </td>
                                   </tr>
                                   <tr>
-                                    <td><p>Baker</p></td>
-                                  </tr>
-                                  <tr>
-                                    <td><h5>Baker Nanduru</h5></td>
-                                  </tr>
-                                  <tr>
-                                    <td><p>Founder & CEO</p></td>
-                                  </tr>
-                                  <tr>
-                                    <td><p>(408) 829-6718</p></td>
-                                  </tr>
-                                  <tr>
-                                    <td><p>baker@delighterr.com</p></td>
+                                    <td>
+                                      <strong>Baker Nanduru</strong>
+                                      <p class="clear-space">Founder & CEO</p>  
+                                      <p class="clear-space">(408) 829-6718</p>
+                                      <p class="clear-space">baker@delighterr.com</p>
+                                    </td>
                                   </tr>
                                 </tbody>
                               </table>
@@ -473,32 +528,33 @@
                       </td>
                     </tr>
                   </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class="footer">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <ul style="list-style: none" class="terms clear-space">
+                            <li>(copy right) Delighterr Inc 2016</li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms</a></li>
+                          </ul>
+                        </td>
+                        <td>
+                          <ul class="social clear-space" style="list-style: none">
+                            <li><a href="#"><img src="linkedin.png"></a></li>
+                            <li><a href="#"><img src="twitter.png"></a></a></li>
+                          </ul>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </td>
               </tr>
-
               <!-- END MAIN CONTENT AREA -->
               </table>
-
-            <!-- START FOOTER -->
-            <div class="footer">
-              <table border="0" cellpadding="0" cellspacing="0">
-                <tr>
-                  <td class="content-block">
-                    <span class="apple-link">Company Inc, 3 Abbey Road, San Francisco CA 94102</span>
-                    <br> Don't like these emails? <a href="http://i.imgur.com/CScmqnj.gif">Unsubscribe</a>.
-                  </td>
-                </tr>
-                <tr>
-                  <td class="content-block powered-by">
-                    Powered by <a href="http://htmlemail.io">HTMLemail</a>.
-                  </td>
-                </tr>
-              </table>
-            </div>
-
             <!-- END FOOTER -->
             
 <!-- END CENTERED WHITE CONTAINER --></div>
+
         </td>
         <td>&nbsp;</td>
       </tr>

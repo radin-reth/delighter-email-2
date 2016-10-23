@@ -62,8 +62,7 @@
         border-radius: 3px;
         width: 100%; }
       .wrapper {
-        box-sizing: border-box;
-        padding: 20px; }
+        box-sizing: border-box; }
       .footer {
         clear: both;
         padding-top: 10px;
@@ -199,10 +198,46 @@
         table td {
           display: block; }}
 
+        .plan {
+          border: 1px solid #ccc;
+        }
+        .platinum {
+          background-color: #b5f3d4;
+        }
+        .silver {
+          background-color: #dbdcf0;
+        }
+        .bronze {
+          background-color: #e8811b;
+        }
+        .title {
+          border-bottom: 1px solid #ccc; }
+          .title h1 {
+            font-size: 15px;
+            font-weight: bold;
+            color: #444;
+            margin: 5px auto; }
+          .title p {
+            text-align: center;
+            font-style: italic;
+            font-size: 12px }
+        .body td {
+          font-size: 13px; }
+        .body > table {
+          padding: 10px; }
+
+        .box {
+          padding: 15px; }
+
+        @media only screen and (min-width: 768px) {
+          .silver-wrapper {
+            padding: 0 15px;
+          }
+        }
     </style>
   </head>
   <body class="">
-    <table border="0" cellpadding="0" cellspacing="0" class="body">
+    <table border="0" cellpadding="0" cellspacing="0">
       <tr>
         <td>&nbsp;</td>
         <td class="container" style="background-color: #ebebeb">
@@ -221,10 +256,18 @@
                   <table border="0" cellpadding="0" cellspacing="0">
                     <tr>
                       <td>
-                        <p>Dear Luke Gotzling,</p>
-                        <p>Thanks for downloading Delighterr plugin. We are excited to help you engage all your clients, prospects and colleagues in more meaningful ways.</p>
+                        <table border="0" cellpadding="0" cellspacing="0" class="box">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <p>Dear Luke Gotzling,</p>
+                                <p>Thanks for downloading Delighterr plugin. We are excited to help you engage all your clients, prospects and colleagues in more meaningful ways.</p>
 
-                        <p>Delighterr analyzed your past email and calendar activities and based on that we have automatically imported top 50 contacts and assigned predefined engagement plans as shown below. You can remove or change the contacts and engagement plans in the plug in.</p>
+                                <p>Delighterr analyzed your past email and calendar activities and based on that we have automatically imported top 50 contacts and assigned predefined engagement plans as shown below. You can remove or change the contacts and engagement plans in the plug in.</p>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                         <table border="0" cellpadding="0" cellspacing="0">
                           <tbody>
                             <tr>
@@ -275,12 +318,12 @@
                                   </tbody>
                                 </table>
                               </td>
-                              <td align="left">
+                              <td align="left" class="silver-wrapper">
                                 <table border="0" cellpadding="0" cellspacing="0">
                                   <tbody>
                                     <tr>
                                       <td>
-                                        <div class="plan platinum">
+                                        <div class="plan silver">
                                           <div class="title">
                                             <h1>platinum plan</h1>
                                             <p>engage: once a week</p>
@@ -327,7 +370,7 @@
                                   <tbody>
                                     <tr>
                                       <td>
-                                        <div class="plan platinum">
+                                        <div class="plan bronze">
                                           <div class="title">
                                             <h1>platinum plan</h1>
                                             <p>engage: once a week</p>
@@ -371,7 +414,7 @@
                               </td>
                             </tr>
                             <tr>
-                              <table border="0" cellpadding="0" cellspacing="0" class="btn btn-primary">
+                              <table border="0" cellpadding="0" cellspacing="0" class="btn btn-primary box">
                                 <tbody>
                                   <tr>
                                     <td><h5>what next?</h5></td>

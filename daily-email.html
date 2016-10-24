@@ -51,9 +51,10 @@
       .content {
         box-sizing: border-box;
         display: block;
-        Margin: 0 auto;
+        margin: 0 auto;
         max-width: 680px;
-        padding: 10px; }
+        padding: 15px;
+        background-color: white; }
       /* -------------------------------------
           HEADER, FOOTER, MAIN
       ------------------------------------- */
@@ -87,7 +88,7 @@
         font-weight: 400;
         line-height: 1.4;
         margin: 0;
-        Margin-bottom: 30px; }
+        margin-bottom: 30px; }
       h1 {
         font-size: 35px;
         font-weight: 300;
@@ -100,7 +101,7 @@
         font-size: 14px;
         font-weight: normal;
         margin: 0;
-        Margin-bottom: 15px; }
+        margin-bottom: 15px; }
         p li,
         ul li,
         ol li {
@@ -158,7 +159,7 @@
       hr {
         border: 0;
         border-bottom: 1px solid #f6f6f6;
-        Margin: 20px 0; }
+        margin: 20px 0; }
       /* -------------------------------------
           RESPONSIVE AND MOBILE FRIENDLY STYLES
       ------------------------------------- */
@@ -200,6 +201,23 @@
           margin-bottom: 20px;
         }
 
+        .table td {
+          font-size: 13px;
+          font-style: italic;
+          color: #444;
+          border-bottom: 1px solid #ddd;
+          padding: 8px 0;
+        }
+
+        .table .active {
+          background-color: #f9f9f9;
+        }
+
+        .table td:first-child,
+        .header th:first-child {
+          padding-left: 15px;
+        }
+
         .actions-title {
           text-transform: capitalize;
           font-size: 17px;
@@ -211,7 +229,7 @@
         }
 
         .header {
-          background-color: #fb805d;
+          background-color: #ffbdaa;
         }
         .header th {
           padding: 5px 0;
@@ -220,6 +238,25 @@
           text-transform: capitalize;
           font-size: 13px;
           text-align: left;
+          border-bottom: 3px solid #fb805d;
+        }
+
+        .question {
+          font-size: 15px;
+          font-weight: bold;
+          margin: 0;
+          color: #333;
+        }
+
+        .question-desc {
+          font-size: 13px;
+        }
+
+        .contact p {
+          margin: 0;
+        }
+        .contact p:not(:first-child) {
+          font-size: 13px;
         }
     </style>
   </head>
@@ -260,7 +297,7 @@
                           <tbody>
                             <tr>
                               <td>
-                                <table border="0" cellpadding="0" cellspacing="0" class="table">
+                                <table border="0" cellpadding="2" cellspacing="0" class="table">
                                   <caption class="actions-title">planned actions</caption>
                                     <thead>
                                       <tr class="header">
@@ -279,7 +316,7 @@
                                         <a href="#">start</a>
                                       </td>
                                     </tr>
-                                    <tr>
+                                    <tr class="active">
                                       <td>Luke Gotzling</td>
                                       <td>today</td>
                                       <td>follow up</td>
@@ -301,7 +338,7 @@
                             </tr>
                             <tr>
                               <td>
-                                <table border="0" cellpadding="0" cellspacing="0" class="table">
+                                <table border="0" cellpadding="3" cellspacing="0" class="table">
                                   <caption class="actions-title">Recommended Actions</caption>
                                     <thead>
                                       <tr class="header">
@@ -321,11 +358,9 @@
                                       </td>
                                     </tr>
                                     <tr>
-                                      <td>Luke Gotzling</td>
-                                      <td>today</td>
-                                      <td>follow up</td>
-                                      <td>
-                                        <a href="#">start</a>
+                                      <td colspan="4">
+                                        <img src="assets-daily/business-intel.png">
+                                        <span>Email with subject Please send me docs is not open within 1 day</span>
                                       </td>
                                     </tr>
                                     <tr>
@@ -334,6 +369,26 @@
                                       <td>follow up</td>
                                       <td>
                                         <a href="#">start</a>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td colspan="4">
+                                        <img src="assets-daily/business-intel.png">
+                                        <span>Email with subject Please send me docs is not open within 1 day</span>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>Luke Gotzling</td>
+                                      <td>today</td>
+                                      <td>follow up</td>
+                                      <td>
+                                        <a href="#">start</a>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td colspan="4">
+                                        <img src="assets-daily/business-intel.png">
+                                        <span>Email with subject Please send me docs is not open within 1 day</span>
                                       </td>
                                     </tr>
                                   </tbody>
@@ -345,12 +400,12 @@
                                 <table border="0" cellpadding="0" cellspacing="0" class="footer"></table>
                                   <tr>
                                     <td>
-                                      <h2>Got Questions or feedback</h2>
+                                      <h2 class="question">Got Questions or feedback</h2>
                                     </td>
                                   </tr>
                                   <tr>
                                     <td>
-                                      <p>
+                                      <p class="question-desc">
                                         Love to hear your comments and questions. 
                                         <a href="#">drop us a note</a>
                                       </p>
@@ -365,7 +420,7 @@
                                 <table border="0" cellpadding="0" cellspacing="0" class="footer"></table>
                                   <tr>
                                     <td>
-                                      <p>thanks and welcome again!</p>
+                                      <p style="margin: 0">Thanks and welcome again!</p>
                                       <span>baker</span>
                                     </td>
                                   </tr>
@@ -377,16 +432,12 @@
                               <td>
                                 <table border="0" cellpadding="0" cellspacing="0" class="footer"></table>
                                   <tr>
-                                    <td>baker nanduru</td>
-                                  </tr>
-                                  <tr>
-                                    <td>Founder & CEO</td>
-                                  </tr>
-                                  <tr>
-                                    <td>(480) 829-6718</td>
-                                  </tr>
-                                  <tr>
-                                    <td>baker@delighterr.com</td>
+                                    <td class="contact">
+                                      <p><strong>baker nanduru</strong></p>
+                                      <p>Founder & CEO</p>
+                                      <p>(480) 829-6718</p>
+                                      <p>baker@delighterr.com</p>
+                                    </td>
                                   </tr>
                                 </table>
                               </td>

@@ -53,8 +53,7 @@
         display: block;
         margin: 0 auto;
         max-width: 680px;
-        padding: 15px;
-        background-color: white; }
+        padding: 15px; }
       /* -------------------------------------
           HEADER, FOOTER, MAIN
       ------------------------------------- */
@@ -67,6 +66,7 @@
       .footer {
         clear: both;
         padding-top: 10px;
+        margin: 0;
         text-align: center;
         width: 100%; }
         .footer td,
@@ -274,12 +274,42 @@
           padding-bottom: 4px;
           border: 0;
         }
+
+        .terms {
+          font-size: 12px;
+        }
+
+        .terms, .social {
+          list-style: none }
+          .terms li, .social li {
+            display: inline-block; }
+
+        .footer {
+          background: transparent;
+          margin-top: 15px;
+          padding: 0;
+        }
+
+        .footer ul {
+          text-align: left;
+        }
+
+        .clear-space {
+          margin: 0;
+          padding: 0;
+        }
+
+        .social img {
+          width: 17px;
+        }
+        .wrapper {
+          padding: 20px;
+        }
     </style>
   </head>
   <body>
     <table border="0" cellpadding="0" cellspacing="0">
       <tr>
-        <td></td>
         <td class="container" style="background-color: #ebebeb">
           <div class="logo"><a href="http://www.delighterr.com" target="_blank">
             <img src="https://dl.dropboxusercontent.com/u/62383170/logo-transparent.png" alt="" width="150px"></a>
@@ -305,6 +335,7 @@
                             </tr>
                           </tbody>
                         </table>
+
                         <table border="0" cellpadding="0" cellspacing="0">
                           <tbody>
                             <tr>
@@ -407,9 +438,10 @@
                                 </table>
                               </td>
                             </tr>
+
                             <tr>
                               <td>
-                                <table border="0" cellpadding="0" cellspacing="0" class="footer"></table>
+                                <table border="0" cellpadding="0" cellspacing="0">
                                   <tr>
                                     <td>
                                       <h2 class="question">Got Questions or feedback</h2>
@@ -429,7 +461,7 @@
 
                             <tr>
                               <td>
-                                <table border="0" cellpadding="0" cellspacing="0" class="footer"></table>
+                                <table border="0" cellpadding="0" cellspacing="0" style="margin-bottom: 15px;">
                                   <tr>
                                     <td>
                                       <p style="margin: 0">Thanks and welcome again!</p>
@@ -442,10 +474,10 @@
 
                             <tr>
                               <td>
-                                <table border="0" cellpadding="0" cellspacing="0" class="footer"></table>
+                                <table border="0" cellpadding="0" cellspacing="0">
                                   <tr>
                                     <td class="contact">
-                                      <p><strong>baker nanduru</strong></p>
+                                      <p><strong>Baker Nanduru</strong></p>
                                       <p>Founder & CEO</p>
                                       <p>(480) 829-6718</p>
                                       <p>baker@delighterr.com</p>
@@ -454,43 +486,38 @@
                                 </table>
                               </td>
                             </tr>
-                            <tr style="display: none;">
-                              <td>
-                                <table border="0" cellpadding="0" cellspacing="0" class="footer">
-                                  <tbody>
-                                    <tr>
-                                      <td>
-                                        <ul style="list-style: none" class="terms clear-space">
-                                          <li>&copy; Delighterr Inc 2016</li>
-                                          <li><a href="http://www.delighterr.com/privacy">Privacy Policy</a></li>
-                                          <li><a href="http://www.delighterr.com/terms">Terms</a></li>
-                                        </ul>
-                                      </td>
-                                      <td>
-                                        <ul class="social clear-space" style="list-style: none">
-                                          <li><a href="https://www.linkedin.com/company/delighterr-inc" target="_blank"><img src="https://dl.dropboxusercontent.com/u/62383170/linkedin.png"></a></li>
-                                          <li><a href="https://twitter.com/delighterrinc" target="_blank"><img src="https://dl.dropboxusercontent.com/u/62383170/twitter.png"></a></a></li>
-                                        </ul>
-                                      </td>
-                                    </tr>
-                                  </tbody>
-                                </table>
-                              </td>
-                            </tr>
                           </tbody>
                         </table>
                       </td>
                     </tr>
-
-                    
                   </table>
-                  
                 </td>
               </tr>
             </table>
+
+
+            <table border="0" cellpadding="0" cellspacing="0" class="footer">
+              <tbody>
+                <tr>
+                  <td>
+                    <ul style="list-style: none" class="terms clear-space">
+                      <li>© Delighterr Inc 2016</li>
+                      <li><a href="http://www.delighterr.com/privacy">Privacy Policy</a></li>
+                      <li><a href="http://www.delighterr.com/terms">Terms</a></li>
+                    </ul>
+                  </td>
+                  <td>
+                    <ul class="social clear-space" style="list-style: none">
+                      <li><a href="https://www.linkedin.com/company/delighterr-inc" target="_blank"><img src="https://dl.dropboxusercontent.com/u/62383170/linkedin.png"></a></li>
+                      <li><a href="https://twitter.com/delighterrinc" target="_blank"><img src="https://dl.dropboxusercontent.com/u/62383170/twitter.png"></a></li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
           </div>
         </td>
-        <td></td>
       </tr>
     </table>
   </body>

@@ -27,8 +27,10 @@
         background-color: white;
         mso-table-lspace: 0pt;
         mso-table-rspace: 0pt;
+        margin-bottom: 15px;
         width: 100%; }
         table td {
+          padding: 0;
           font-family: sans-serif;
           font-size: 14px;
           vertical-align: top; }
@@ -51,7 +53,6 @@
       .content {
         box-sizing: border-box;
         display: block;
-        background-color: white;
         margin: 0 auto;
         max-width: 680px;
         padding: 15px; }
@@ -61,6 +62,7 @@
       .main {
         background: #fff;
         border-radius: 3px;
+        padding: 15px;
         width: 100%; }
       .wrapper {
         box-sizing: border-box; }
@@ -198,15 +200,21 @@
         }
 
         .table {
-          margin-bottom: 20px;
+          border: 1px solid #ccc;
+          width: 100%;
+        }
+
+        .table caption {
+          margin-top: 15px;
         }
 
         .table td {
           font-size: 13px;
           font-style: italic;
           color: #444;
-          border-bottom: 1px solid #ddd;
-          padding: 8px 0;
+          padding: 0;
+          vertical-align: bottom;
+          padding-bottom: 15px;
         }
 
         .table .active {
@@ -216,6 +224,7 @@
         .table td:first-child,
         .header th:first-child {
           padding-left: 15px;
+          padding-bottom: 13px;
         }
 
         .actions-title {
@@ -303,9 +312,6 @@
         .social img {
           width: 17px;
         }
-        .wrapper {
-          padding: 20px;
-        }
 
         .showcase * {
           margin: 0;
@@ -322,6 +328,102 @@
         .bio {
           font-style: italic;
           font-size: 12px;
+        }
+
+        .width50 {
+          width: 50%;
+        }
+
+        .engagement-title {
+          text-align: center;
+          font-size: 13px;
+          font-weight: bold;
+          margin: 0;
+          padding: 12px 0;
+          color: #444;
+          margin-bottom: 15px;
+        }
+
+        .envelop {
+          width: 15px;
+          vertical-align: sub;
+          margin-right: 5px;
+        }
+
+        .engagement-p {
+          padding: 0;
+          margin: 0;
+          font-size: 12px;
+        }
+
+        .fs12 {
+          font-size: 12px;
+        }
+
+        .box-square {
+          display: inline-block;
+          width: 30px;
+          height: 30px;
+          background-color: #75a2cc;
+          margin-right: 18px;
+        }
+
+        .recent-eng {
+          color: white;
+          background-color: #D4A86A;
+          border-bottom: 4px solid #805315;
+        }
+
+        .upcoming-eng {
+          color: white;
+          background-color: #A5C663;
+          border-bottom: 4px solid #567714;
+        }
+
+        .recent-notes {
+          color: white;
+          background-color: #417C81;
+          border-bottom: 4px solid #0E494E;
+        }
+
+        .latest-news {
+          color: white;
+          background-color: #5B5494;
+          border-bottom: 4px solid #1F1959;
+        }
+
+        .question {
+          margin: 0;
+          font-size: 14px;
+          font-weight: bold;
+        }
+
+        .marketing {
+          display: inline;
+        }
+
+        .recommend {
+          margin: 5px 0;
+          font-weight: bold;
+          font-size: 14px;
+          font-style: italic;
+          color: #444;
+        }
+
+        .recommend + .thanks p {
+          font-size: 13px;
+          margin: 0;
+        }
+
+        @media only screen and (max-width: 768px) {
+          .width50 {
+            width: 100%;
+            display: block;
+          }
+
+          .marketing {
+            display: none;
+          }
         }
     </style>
   </head>
@@ -353,18 +455,18 @@
                 </td>
               </tr>
               <tr>
-                <td class="wrapper" style="border: 1px solid #666;">
+                <td class="wrapper">
                   <table border="0" cellpadding="0" cellspacing="0">
                     <tr>
                       <td>
                         <table border="0" cellpadding="0" cellspacing="0">
                           <tbody>
                             <tr>
-                              <tr>
+                              <td>
                                 <table border="0" cellpadding="0" cellspacing="0" style="background-color: #e2e2ee; padding: 10px" class="showcase">
                                   <tbody>
                                     <tr>
-                                      <td style="vertical-align: middle"><img src="assets-daily/marketing.png" width="55px"></td>
+                                      <td style="vertical-align: middle"><img class="marketing" src="assets-daily/marketing.png" width="55px"></td>
                                       <td>
                                         <h2 class="bio-name">Luke Gotzling</h2>
                                         <p class="bio">Works: Engineer@Dlighterr</p>
@@ -383,47 +485,51 @@
                                     </tr>
                                   </tbody>
                                 </table>
-                              </tr>
+                              </td>
                             </tr>
                             <tr>
                               <td>
-                                <table border="0" cellpadding="0" cellspacing="0">
+                                <table border="0" cellpadding="7" cellspacing="10px" style="margin: 0; border: 1px solid #ccc; border-radius: 3px; padding: 0;">
                                   <tbody>
                                     <tr>
-                                      <td>
-                                        <table border="0" cellpadding="0" cellspacing="0">
-                                          <caption>Recent Engagement</caption>
+                                      <td class="width50">
+                                        <table border="0" cellpadding="0" cellspacing="0" class="table left" style="border-color: #e0e0e1; border-radius: 3px">
                                           <tbody>
                                             <tr>
-                                              <td>
+                                              <td style="padding: 0;">
+                                                <h3 class="engagement-title recent-eng">Recent Engagement</h3>
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <td style="padding: 0;">
                                                 <table border="0" cellpadding="0" cellspacing="0">
                                                   <tbody>
                                                     <tr>
-                                                      <td><img src="premeeting/mail.png" alt="mail" width="30px"></td>
+                                                      <td><img src="premeeting/mail.png" alt="mail" class="envelop"></td>
                                                       <td>
-                                                        <span>1021</span>
-                                                        <p>&quot;when are ou gonna send me stuff&quot;</p>
+                                                        <span class="fs12">1021</span>
+                                                        <p class="engagement-p fs12">&quot;when are ou gonna send me stuff&quot;</p>
                                                       </td>
                                                     </tr>
                                                     <tr>
-                                                      <td><img src="premeeting/mail.png" alt="mail" width="30px"></td>
+                                                      <td><img src="premeeting/mail.png" alt="mail" class="envelop"></td>
                                                       <td>
-                                                        <span>1021</span>
-                                                        <p>&quot;when are ou gonna send me stuff&quot;</p>
+                                                        <span class="fs12">1021</span>
+                                                        <p class="engagement-p fs12">&quot;when are ou gonna send me stuff&quot;</p>
                                                       </td>
                                                     </tr>
                                                     <tr>
-                                                      <td><img src="premeeting/mail.png" alt="mail" width="30px"></td>
+                                                      <td><img src="premeeting/mail.png" alt="mail" class="envelop"></td>
                                                       <td>
-                                                        <span>1021</span>
-                                                        <p>&quot;when are ou gonna send me stuff&quot;</p>
+                                                        <span class="fs12">1021</span>
+                                                        <p class="engagement-p fs12">&quot;when are ou gonna send me stuff&quot;</p>
                                                       </td>
                                                     </tr>
                                                     <tr>
-                                                      <td><img src="premeeting/calendar.png" alt="mail" width="30px"></td>
+                                                      <td><img src="premeeting/calendar.png" alt="mail" class="envelop"></td>
                                                       <td>
-                                                        <span>1021</span>
-                                                        <p>&quot;when are ou gonna send me stuff&quot;</p>
+                                                        <span class="fs12">1021</span>
+                                                        <p class="engagement-p fs12">&quot;when are ou gonna send me stuff&quot;</p>
                                                       </td>
                                                     </tr>
                                                   </tbody>
@@ -434,28 +540,34 @@
                                         </table>
 
 
-                                        <table border="0" cellpadding="0" cellspacing="0">
-                                          <caption>upcoming engagement</caption>
+                                        <table border="0" cellpadding="0" cellspacing="0" class="table left" style="border-color: #e0e0e1; border-radius: 3px">
                                           <tbody>
                                             <tr>
-                                              <td>
+                                              <td style="padding: 0;">
+                                                <h3 class="engagement-title upcoming-eng">Upcoming Engagement</h3>
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <td style="padding: 5px;">
                                                 <table border="0" cellpadding="0" cellspacing="0">
                                                   <tbody>
                                                     <tr>
-                                                      <td><img src="premeeting/mail.png" alt="mail" width="30px"></td>
+                                                      <td><img src="premeeting/mail.png" alt="mail" class="envelop"></td>
                                                       <td>
-                                                        <span>1021</span>
-                                                        <p>follow up: Get some documents</p>
+                                                        <span class="fs12">1021</span>
+                                                        <p class="engagement-p fs12">follow up: Get some documents</p>
                                                       </td>
                                                     </tr>
                                                     <tr>
                                                       <td colspan="2">
-                                                        <h3>Recommendations</h3>
-                                                        <p>Thanks: Survey Successfully Completed</p>
-                                                        <p>
-                                                          Follow up: Email with subject &quot; Please send me docs &quote; is not opened with in 1 day.
-                                                        </p>
-                                                        <p>Birthday: Birthday on 12/21/2016</p>
+                                                        <h3 class="recommend">Recommendations</h3>
+                                                        <div class="thanks">
+                                                          <p>Thanks: Survey Successfully Completed</p>
+                                                          <p>
+                                                            Follow up: Email with subject &quot; Please send me docs &quot; is not opened with in 1 day.
+                                                          </p>
+                                                          <p>Birthday: Birthday on 12/21/2016</p>
+                                                        </div>
                                                       </td>
                                                     </tr>
                                                   </tbody>
@@ -465,26 +577,28 @@
                                           </tbody>
                                         </table>
                                       </td>
-                                      <td>
-                                        <table border="0" cellpadding="0" cellspacing="0">
-                                          <caption>Recent Notes</caption>
+                                      <td class="width50">
+                                        <table border="0" cellpadding="0" cellspacing="0" class="table right" style="border-color: #e0e0e1; border-radius: 3px">
                                           <tbody>
                                             <tr>
-                                              <td>
+                                              <td style="padding: 0;">
+                                                <h3 class="engagement-title recent-notes">Recent Notes</h3>
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <td style="padding: 0;">
                                                 <table border="0" cellpadding="0" cellspacing="0">
                                                   <tbody>
                                                     <tr>
-                                                      <td><img src="premeeting/mail.png" alt="mail" width="30px"></td>
                                                       <td>
-                                                        <span>1021</span>
-                                                        <p>&quot;when are ou gonna send me stuff&quot;</p>
+                                                        <span class="fs12">1021</span>
+                                                        <p class="engagement-p fs12">&quot;when are ou gonna send me stuff&quot;</p>
                                                       </td>
                                                     </tr>
                                                     <tr>
-                                                      <td><img src="premeeting/mail.png" alt="mail" width="30px"></td>
                                                       <td>
-                                                        <span>1021</span>
-                                                        <p>&quot;when are ou gonna send me stuff&quot;</p>
+                                                        <span class="fs12">1021</span>
+                                                        <p class="engagement-p fs12">&quot;when are ou gonna send me stuff&quot;</p>
                                                       </td>
                                                     </tr>
                                                   </tbody>
@@ -495,19 +609,51 @@
                                         </table>
 
 
-                                        <table border="0" cellpadding="0" cellspacing="0">
-                                          <caption>Latest News</caption>
+                                        <table border="0" cellpadding="0" cellspacing="0" class="table right" style="border-color: #e0e0e1; border-radius: 3px">
                                           <tbody>
                                             <tr>
-                                              <td>
+                                              <td style="padding: 0;">
+                                                <h3 class="engagement-title latest-news">Latest News</h3>
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <td style="padding: 0;">
                                                 <table border="0" cellpadding="0" cellspacing="0">
                                                   <tbody>
                                                     <tr>
                                                       <td>
-                                                        <p>NY Jests Expected to Start Juno Smith and they suck...</p>
+                                                        <p class="engagement-p fs12">NY Jests Expected to Start Juno Smith and they suck...</p>
                                                       </td>
 
-                                                      <td><img src="premeeting/mail.png" alt="mail" width="30px"></td>
+                                                      <td><span class="box-square"></span></td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>
+                                                        <p class="engagement-p fs12">NY Jests Expected to Start Juno Smith and they suck...</p>
+                                                      </td>
+
+                                                      <td><span class="box-square"></span></td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>
+                                                        <p class="engagement-p fs12">NY Jests Expected to Start Juno Smith and they suck...</p>
+                                                      </td>
+
+                                                      <td><span class="box-square"></span></td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>
+                                                        <p class="engagement-p fs12">NY Jests Expected to Start Juno Smith and they suck...</p>
+                                                      </td>
+
+                                                      <td><span class="box-square"></span></td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>
+                                                        <p class="engagement-p fs12">NY Jests Expected to Start Juno Smith and they suck...</p>
+                                                      </td>
+
+                                                      <td><span class="box-square"></span></td>
                                                     </tr>
                                                   </tbody>
                                                 </table>
@@ -532,8 +678,8 @@
                                 <table border="0" cellpadding="0" cellspacing="0" style="margin-bottom: 15px;">
                                   <tr>
                                     <td>
-                                      <h2>Got Questions or Feedback</h2>
-                                      <p>Love to hear your comments and questions. Please <a href="#">drop us a note</a></p>
+                                      <h2 class="question">Got Questions or Feedback</h2>
+                                      <p class="qp">Love to hear your comments and questions. Please <a href="#">drop us a note</a></p>
                                     </td>
                                   </tr>
                                   <tr>

@@ -1,0 +1,524 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Daily Email</title>
+    <style>
+      /* -------------------------------------
+          GLOBAL RESETS
+      ------------------------------------- */
+      img {
+        border: none;
+        -ms-interpolation-mode: bicubic;
+        max-width: 100%; }
+      body {
+        background-color: #f6f6f6;
+        font-family: sans-serif;
+        -webkit-font-smoothing: antialiased;
+        font-size: 14px;
+        line-height: 1.4;
+        margin: 0;
+        padding: 0;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%; }
+      table {
+        border-collapse: separate;
+        background-color: white;
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+        width: 100%; }
+        table td {
+          font-family: sans-serif;
+          font-size: 14px;
+          vertical-align: top; }
+      /* -------------------------------------
+          BODY & CONTAINER
+      ------------------------------------- */
+      .body {
+        background-color: #f6f6f6;
+        width: 100%; }
+      /* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
+      .container {
+        display: block;
+        margin: 0 auto !important;
+        /* makes it centered */
+        max-width: 680px;
+        padding: 10px;
+        width: auto !important;
+        width: 680px; }
+      /* This should also be a block element, so that it will fill 100% of the .container */
+      .content {
+        box-sizing: border-box;
+        display: block;
+        margin: 0 auto;
+        max-width: 680px;
+        padding: 15px; }
+      /* -------------------------------------
+          HEADER, FOOTER, MAIN
+      ------------------------------------- */
+      .main {
+        background: #fff;
+        border-radius: 3px;
+        width: 100%; }
+      .wrapper {
+        box-sizing: border-box; }
+      .footer {
+        clear: both;
+        padding-top: 10px;
+        margin: 0;
+        text-align: center;
+        width: 100%; }
+        .footer td,
+        .footer p,
+        .footer span,
+        .footer a {
+          color: #999999;
+          font-size: 12px;
+          text-align: center; }
+      /* -------------------------------------
+          TYPOGRAPHY
+      ------------------------------------- */
+      h1,
+      h2,
+      h3,
+      h4 {
+        color: #000000;
+        font-family: sans-serif;
+        font-weight: 400;
+        line-height: 1.4;
+        margin: 0;
+        margin-bottom: 30px; }
+      h1 {
+        font-size: 35px;
+        font-weight: 300;
+        text-align: center;
+        text-transform: capitalize; }
+      p,
+      ul,
+      ol {
+        font-family: sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+        margin: 0;
+        margin-bottom: 15px; }
+        p li,
+        ul li,
+        ol li {
+          list-style-position: inside;
+          margin-left: 5px; }
+      a {
+        color: #3498db;
+        text-decoration: underline; }
+      /* -------------------------------------
+          BUTTONS
+      ------------------------------------- */
+      .btn {
+        box-sizing: border-box;
+        width: 100%; }
+        .btn table {
+          width: auto; }
+        .btn table td {
+          background-color: #ffffff;
+          border-radius: 5px;
+          text-align: center; }
+      .btn-primary table td {
+        background-color: #3498db; }
+      /* -------------------------------------
+          OTHER STYLES THAT MIGHT BE USEFUL
+      ------------------------------------- */
+      .last {
+        margin-bottom: 0; }
+      .first {
+        margin-top: 0; }
+      .align-center {
+        text-align: center; }
+      .align-right {
+        text-align: right; }
+      .align-left {
+        text-align: left; }
+      .clear {
+        clear: both; }
+      .mt0 {
+        margin-top: 0; }
+      .mb0 {
+        margin-bottom: 0; }
+      .preheader {
+        color: transparent;
+        display: none;
+        height: 0;
+        max-height: 0;
+        max-width: 0;
+        opacity: 0;
+        overflow: hidden;
+        mso-hide: all;
+        visibility: hidden;
+        width: 0; }
+      .powered-by a {
+        text-decoration: none; }
+      hr {
+        border: 0;
+        border-bottom: 1px solid #f6f6f6;
+        margin: 20px 0; }
+      /* -------------------------------------
+          RESPONSIVE AND MOBILE FRIENDLY STYLES
+      ------------------------------------- */
+      @media only screen and (max-width: 768px) {
+        table[class=body] h1 {
+          font-size: 28px !important;
+          margin-bottom: 10px !important; }
+        table[class=body] p,
+        table[class=body] ul,
+        table[class=body] ol,
+        table[class=body] td,
+        table[class=body] span,
+        table[class=body] a {
+          font-size: 16px !important; }
+        table[class=body] .wrapper,
+        table[class=body] .article {
+          padding: 10px !important; }
+        table[class=body] .content {
+          padding: 0 !important; }
+        table[class=body] .container {
+          padding: 0 !important;
+          width: 100% !important; }
+        table[class=body] .main {
+          border-left-width: 0 !important;
+          border-radius: 0 !important;
+          border-right-width: 0 !important; }
+        table[class=body] .btn table {
+          width: 100% !important; }
+        table[class=body] .btn a {
+          width: 100% !important; }
+        table[class=body] .img-responsive {
+          height: auto !important;
+          max-width: 100% !important;
+          width: auto !important; }
+        }
+
+        .table {
+          margin-bottom: 20px;
+        }
+
+        .table td {
+          font-size: 13px;
+          font-style: italic;
+          color: #444;
+          border-bottom: 1px solid #ddd;
+          padding: 8px 0;
+        }
+
+        .table .active {
+          background-color: #f9f9f9;
+        }
+
+        .table td:first-child,
+        .header th:first-child {
+          padding-left: 15px;
+        }
+
+        .actions-title {
+          text-transform: capitalize;
+          font-size: 17px;
+          font-weight: bold;
+          font-style: italic;
+          color: #444;
+          text-align: left;
+          margin-bottom: 10px
+        }
+
+        .header {
+          background-color: #ffbdaa;
+        }
+        .header th {
+          padding: 5px 0;
+          color: white;
+          font-style: italic;
+          text-transform: capitalize;
+          font-size: 13px;
+          text-align: left;
+          border-bottom: 3px solid #fb805d;
+        }
+
+        .question {
+          font-size: 15px;
+          font-weight: bold;
+          margin: 0;
+          color: #333;
+        }
+
+        .question-desc {
+          font-size: 13px;
+        }
+
+        .contact p {
+          margin: 0;
+        }
+        .contact p:not(:first-child) {
+          font-size: 13px;
+        }
+        .logo {
+          text-align: center;
+          margin: 10px auto;
+        }
+
+        .table-recommend tr:nth-of-type(even) td {
+          padding: 0 0 4px;
+          font-size: 11px;
+          padding-left: 15px;
+        }
+        .table-recommend tr:nth-of-type(even) img {
+          width: 9px;
+        }
+        .table-recommend tr:nth-of-type(odd) td {
+          padding-bottom: 4px;
+          border: 0;
+        }
+
+        .terms {
+          font-size: 12px;
+        }
+
+        .terms, .social {
+          list-style: none }
+          .terms li, .social li {
+            display: inline-block; }
+
+        .footer {
+          background: transparent;
+          margin-top: 15px;
+          padding: 0;
+        }
+
+        .footer ul {
+          text-align: left;
+        }
+
+        .clear-space {
+          margin: 0;
+          padding: 0;
+        }
+
+        .social img {
+          width: 17px;
+        }
+        .wrapper {
+          padding: 20px;
+        }
+    </style>
+  </head>
+  <body>
+    <table border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td class="container" style="background-color: #ebebeb">
+          <div class="logo"><a href="http://www.delighterr.com" target="_blank">
+            <img src="https://dl.dropboxusercontent.com/u/62383170/logo-transparent.png" alt="" width="150px"></a>
+          </div>
+          <div class="content">
+            <span class="preheader">Welcome to Delighterr. We automatically imported your top contacts and you are good to go.</span>
+            <table class="main">
+              <tr>
+                <td class="wrapper">
+                  <table border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td>
+                        <table border="0" cellpadding="0" cellspacing="0" class="box">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <p>Dear Luke Gotzling,</p>
+                                <p>Good Morning, Here are planned and recommended actions to engage your contacts.</p>
+                              </td>
+                              <td>
+                                <img src="assets-daily/sidebar.gif" alt="access plugin" width="80">
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+
+                        <table border="0" cellpadding="0" cellspacing="0">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <table border="0" cellpadding="2" cellspacing="0" class="table">
+                                  <caption class="actions-title">planned actions</caption>
+                                    <thead>
+                                      <tr class="header">
+                                        <th>contact name</th>
+                                        <th>due date</th>
+                                        <th>action type</th>
+                                        <th>actions</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                      <td>Luke Gotzling</td>
+                                      <td>today</td>
+                                      <td>follow up</td>
+                                      <td>
+                                        <a href="mailto:someone@delighterr.com?subject=SUBJECT&body=BODY">start</a>
+                                      </td>
+                                    </tr>
+                                    <tr class="active">
+                                      <td>Luke Gotzling</td>
+                                      <td>today</td>
+                                      <td>follow up</td>
+                                      <td>
+                                        <a href="mailto:someone@delighterr.com?subject=SUBJECT&body=BODY">start</a>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>Luke Gotzling</td>
+                                      <td>today</td>
+                                      <td>follow up</td>
+                                      <td>
+                                        <a href="mailto:someone@delighterr.com?subject=SUBJECT&body=BODY">start</a>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <table border="0" cellpadding="3" cellspacing="0" class="table table-recommend">
+                                  <caption class="actions-title">Recommended Actions</caption>
+                                    <thead>
+                                      <tr class="header">
+                                        <th>contact name</th>
+                                        <th>due date</th>
+                                        <th>action type</th>
+                                        <th>actions</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                      <td>Luke Gotzling</td>
+                                      <td>today</td>
+                                      <td>follow up</td>
+                                      <td>
+                                        <a href="mailto:someone@delighterr.com?subject=SUBJECT&body=BODY">start</a>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td colspan="4">
+                                        <img src="assets-daily/business-intel.png">
+                                        <span>Email with subject Please send me docs is not open within 1 day</span>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>Luke Gotzling</td>
+                                      <td>today</td>
+                                      <td>follow up</td>
+                                      <td>
+                                        <a href="mailto:someone@delighterr.com?subject=SUBJECT&body=BODY">start</a>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td colspan="4">
+                                        <img src="assets-daily/business-intel.png">
+                                        <span>Email with subject Please send me docs is not open within 1 day</span>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>Luke Gotzling</td>
+                                      <td>today</td>
+                                      <td>follow up</td>
+                                      <td>
+                                        <a href="mailto:someone@delighterr.com?subject=SUBJECT&body=BODY">start</a>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td colspan="4">
+                                        <img src="assets-daily/business-intel.png">
+                                        <span>Email with subject Please send me docs is not open within 1 day</span>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td>
+                                <table border="0" cellpadding="0" cellspacing="0">
+                                  <tr>
+                                    <td>
+                                      <h2 class="question">Got Questions or feedback</h2>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <p class="question-desc">
+                                        Love to hear your comments and questions. 
+                                        <a href="#">drop us a note</a>
+                                      </p>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td>
+                                <table border="0" cellpadding="0" cellspacing="0" style="margin-bottom: 15px;">
+                                  <tr>
+                                    <td>
+                                      <p style="margin: 0">Thanks and welcome again!</p>
+                                      <span>baker</span>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td>
+                                <table border="0" cellpadding="0" cellspacing="0">
+                                  <tr>
+                                    <td class="contact">
+                                      <p><strong>Baker Nanduru</strong></p>
+                                      <p>Founder & CEO</p>
+                                      <p>(480) 829-6718</p>
+                                      <p>baker@delighterr.com</p>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+
+
+            <table border="0" cellpadding="0" cellspacing="0" class="footer">
+              <tbody>
+                <tr>
+                  <td>
+                    <ul style="list-style: none" class="terms clear-space">
+                      <li>© Delighterr Inc 2016</li>
+                      <li><a href="http://www.delighterr.com/privacy">Privacy Policy</a></li>
+                      <li><a href="http://www.delighterr.com/terms">Terms</a></li>
+                    </ul>
+                  </td>
+                  <td>
+                    <ul class="social clear-space" style="list-style: none">
+                      <li><a href="https://www.linkedin.com/company/delighterr-inc" target="_blank"><img src="https://dl.dropboxusercontent.com/u/62383170/linkedin.png"></a></li>
+                      <li><a href="https://twitter.com/delighterrinc" target="_blank"><img src="https://dl.dropboxusercontent.com/u/62383170/twitter.png"></a></li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

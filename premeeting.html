@@ -51,6 +51,7 @@
       .content {
         box-sizing: border-box;
         display: block;
+        background-color: white;
         margin: 0 auto;
         max-width: 680px;
         padding: 15px; }
@@ -305,6 +306,23 @@
         .wrapper {
           padding: 20px;
         }
+
+        .showcase * {
+          margin: 0;
+          padding: 0;
+        }
+
+        .bio-name {
+          font-size: 14px;
+          font-weight: bold;
+          margin-bottom: 4px;
+          color: #444;
+        }
+
+        .bio {
+          font-style: italic;
+          font-size: 12px;
+        }
     </style>
   </head>
   <body>
@@ -318,26 +336,55 @@
             <span class="preheader">Welcome to Delighterr. We automatically imported your top contacts and you are good to go.</span>
             <table class="main">
               <tr>
-                <td class="wrapper">
+                <td>
+                  <table border="0" cellpadding="0" cellspacing="0" class="box">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <p>Dear Luke Gotzling,</p>
+                          <p>You have a meeting <b>Discuss Next Steps</b> in few minutes. Here are some useful things for the meeting.</p>
+                        </td>
+                        <td>
+                          <img src="assets-daily/sidebar.gif" alt="access plugin" width="80">
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td class="wrapper" style="border: 1px solid #666;">
                   <table border="0" cellpadding="0" cellspacing="0">
                     <tr>
                       <td>
-                        <table border="0" cellpadding="0" cellspacing="0" class="box">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <p>Dear Luke Gotzling,</p>
-                                <p>You have a meeting <b>Discuss Next Steps</b> in few minutes. Here are some useful things for the meeting.</p>
-                              </td>
-                              <td>
-                                <img src="assets-daily/sidebar.gif" alt="access plugin" width="80">
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-
                         <table border="0" cellpadding="0" cellspacing="0">
                           <tbody>
+                            <tr>
+                              <tr>
+                                <table border="0" cellpadding="0" cellspacing="0" style="background-color: #e2e2ee; padding: 10px" class="showcase">
+                                  <tbody>
+                                    <tr>
+                                      <td style="vertical-align: middle"><img src="assets-daily/marketing.png" width="55px"></td>
+                                      <td>
+                                        <h2 class="bio-name">Luke Gotzling</h2>
+                                        <p class="bio">Works: Engineer@Dlighterr</p>
+                                        <p class="bio">Loves: Hiking, San Francisco 49ers</p>
+                                        <p class="bio">Family: Brother: Jake, Cat: Johnny</p>
+                                      </td>
+                                      <td>&nbsp;</td>
+                                      <td>
+                                        <img src="assets-daily/marker.png" style="vertical-align: inherit;">
+                                        <span style="font-size: 12px;">San Francisco, CA</span>
+                                        <div class="weather" style="margin-top: 10px; font-weight: bold;">
+                                          <img src="assets-daily/sun-cloud.png" width="20px" style="vertical-align: bottom;" class="sun-clound">
+                                          <span>72 &deg;F</span>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </tr>
+                            </tr>
                             <tr>
                               <td>
                                 <table border="0" cellpadding="0" cellspacing="0">
@@ -384,9 +431,90 @@
                                               </td>
                                             </tr>
                                           </tbody>
+                                        </table>
+
+
+                                        <table border="0" cellpadding="0" cellspacing="0">
+                                          <caption>upcoming engagement</caption>
+                                          <tbody>
+                                            <tr>
+                                              <td>
+                                                <table border="0" cellpadding="0" cellspacing="0">
+                                                  <tbody>
+                                                    <tr>
+                                                      <td><img src="premeeting/mail.png" alt="mail" width="30px"></td>
+                                                      <td>
+                                                        <span>1021</span>
+                                                        <p>follow up: Get some documents</p>
+                                                      </td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td colspan="2">
+                                                        <h3>Recommendations</h3>
+                                                        <p>Thanks: Survey Successfully Completed</p>
+                                                        <p>
+                                                          Follow up: Email with subject &quot; Please send me docs &quote; is not opened with in 1 day.
+                                                        </p>
+                                                        <p>Birthday: Birthday on 12/21/2016</p>
+                                                      </td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
                                       </td>
                                       <td>
-                                        recent note + latest news
+                                        <table border="0" cellpadding="0" cellspacing="0">
+                                          <caption>Recent Notes</caption>
+                                          <tbody>
+                                            <tr>
+                                              <td>
+                                                <table border="0" cellpadding="0" cellspacing="0">
+                                                  <tbody>
+                                                    <tr>
+                                                      <td><img src="premeeting/mail.png" alt="mail" width="30px"></td>
+                                                      <td>
+                                                        <span>1021</span>
+                                                        <p>&quot;when are ou gonna send me stuff&quot;</p>
+                                                      </td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td><img src="premeeting/mail.png" alt="mail" width="30px"></td>
+                                                      <td>
+                                                        <span>1021</span>
+                                                        <p>&quot;when are ou gonna send me stuff&quot;</p>
+                                                      </td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+
+
+                                        <table border="0" cellpadding="0" cellspacing="0">
+                                          <caption>Latest News</caption>
+                                          <tbody>
+                                            <tr>
+                                              <td>
+                                                <table border="0" cellpadding="0" cellspacing="0">
+                                                  <tbody>
+                                                    <tr>
+                                                      <td>
+                                                        <p>NY Jests Expected to Start Juno Smith and they suck...</p>
+                                                      </td>
+
+                                                      <td><img src="premeeting/mail.png" alt="mail" width="30px"></td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
                                       </td>
                                     </tr>
                                   </tbody>
@@ -394,9 +522,20 @@
                               </td>
                             </tr>
 
-                            <tr>
+                            
+                          </tbody>
+                        </table>
+
+                        <table border="0" cellpadding="0" cellspacing="0">
+                          <tr>
                               <td>
                                 <table border="0" cellpadding="0" cellspacing="0" style="margin-bottom: 15px;">
+                                  <tr>
+                                    <td>
+                                      <h2>Got Questions or Feedback</h2>
+                                      <p>Love to hear your comments and questions. Please <a href="#">drop us a note</a></p>
+                                    </td>
+                                  </tr>
                                   <tr>
                                     <td>
                                       <p style="margin: 0">Thanks and welcome again!</p>
@@ -421,7 +560,6 @@
                                 </table>
                               </td>
                             </tr>
-                          </tbody>
                         </table>
                       </td>
                     </tr>

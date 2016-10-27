@@ -223,8 +223,7 @@
 
         .table td:first-child,
         .header th:first-child {
-          padding-left: 15px;
-          padding-bottom: 13px;
+          padding: 15px;
         }
 
         .actions-title {
@@ -328,6 +327,7 @@
         .bio {
           font-style: italic;
           font-size: 12px;
+          margin-bottom: 3px;
         }
 
         .width50 {
@@ -415,6 +415,27 @@
           margin: 0;
         }
 
+        .ico {
+          width: 16px;
+          vertical-align: bottom;
+        }
+
+        .social-sm {
+          display: none
+        }
+
+        .fs12 {
+          display: table-cell;
+        }
+
+        span.fs12 {
+          font-weight: bold;
+        }
+
+        span.fs12:after {
+          content: ":\00a0";
+        }
+
         @media only screen and (max-width: 768px) {
           .width50 {
             width: 100%;
@@ -423,6 +444,19 @@
 
           .marketing {
             display: none;
+          }
+
+          .social-sm {
+            display: block;
+          }
+
+          .social-sm ul {
+            list-style: none;
+          }
+
+          .social-sm ul li {
+            display: inline-block;
+            margin-right: 5px;
           }
         }
     </style>
@@ -459,33 +493,72 @@
                   <table border="0" cellpadding="0" cellspacing="0">
                     <tr>
                       <td>
-                        <table border="0" cellpadding="0" cellspacing="0">
+                        <table border="0" cellpadding="0" cellspacing="0" style="border: 1px solid #ccc; border-radius: 3px; ">
                           <tbody>
                             <tr>
                               <td>
-                                <table border="0" cellpadding="0" cellspacing="0" style="background-color: #e9f2ff; padding: 10px" class="showcase">
+                                <table border="0" cellpadding="0" cellspacing="0" style="padding: 10px; margin: 0">
                                   <tbody>
                                     <tr>
-                                      <td style="vertical-align: middle; position: relative;">
-                                        <img class="marketing" src="assets-daily/profile.png" width="55px">
-                                        <img src="assets-daily/in.png" style="width: 20px; position: absolute; left: 4px; top: 1px">
-                                        <img src="assets-daily/tw.png" style="width: 20px; position: absolute; left: -10px; top: 24px">
-                                        <img src="assets-daily/fb.png" style="width: 20px; position: absolute; left: 5px; top: 44px">
-                                      </td>
                                       <td>
-                                        <h2 class="bio-name">Luke Gotzling</h2>
-                                        <p class="bio">Works: Engineer@Dlighterr</p>
-                                        <p class="bio">Loves: Hiking, San Francisco 49ers</p>
-                                        <p class="bio">Family: Brother: Jake, Cat: Johnny</p>
-                                      </td>
-                                      <td>&nbsp;</td>
-                                      <td>
-                                        <img src="assets-daily/marker.png" style="vertical-align: inherit;">
-                                        <span style="font-size: 12px;">San Francisco, CA</span>
-                                        <div class="weather" style="margin-top: 10px; font-weight: bold;">
-                                          <img src="assets-daily/sun-cloud.png" width="20px" style="vertical-align: bottom;" class="sun-clound">
-                                          <span>72 &deg;F</span>
-                                        </div>
+                                        <table border="0" cellpadding="0" cellspacing="0" style="background-color: #e9f2ff; padding: 10px; margin-bottom: 0;" class="showcase">
+                                          <tbody>
+                                            <tr>
+                                              <td style="vertical-align: middle; position: relative; text-align: center">
+                                                <img class="marketing" src="assets-daily/profile-lg.png" width="55px">
+                                                <a href="#">
+                                                  <img src="assets-daily/in.png" style="width: 20px; position: absolute; left: 17px; top: 2px">
+                                                </a>
+
+                                                <a href="#">
+                                                  <img src="assets-daily/tw.png" style="width: 20px; position: absolute; left: 2px; top: 23px">
+                                                </a>
+
+                                                <a href="#">
+                                                  <img src="assets-daily/fb.png" style="width: 20px; position: absolute; left: 16px; top: 44px">
+                                                </a>
+                                              </td>
+                                              <td>
+                                                <h2 class="bio-name">Luke Gotzling</h2>
+                                                <p class="bio">
+                                                  <img src="assets-daily/suitcase.png" class="ico">
+                                                  Works: Engineer@Dlighterr
+                                                </p>
+                                                <p class="bio">
+                                                  <img src="assets-daily/heart.png" class="ico">
+                                                  Loves: Hiking, San Francisco 49ers
+                                                </p>
+                                                <p class="bio">
+                                                  <img src="assets-daily/family.png" class="ico">
+                                                  Family: Brother: Jake, Cat: Johnny
+                                                </p>
+
+                                                <div class="social-sm">
+                                                  <ul>
+                                                    <li>
+                                                      <a href="#"><img src="assets-daily/in.png" class="ico"></a>
+                                                    </li>
+                                                    <li>
+                                                      <a href="#"><img src="assets-daily/tw.png" class="ico"></a>
+                                                    </li>
+                                                    <li>
+                                                      <a href="#"><img src="assets-daily/fb.png" class="ico"></a>
+                                                    </li>
+                                                  </ul>
+                                                </div>
+                                              </td>
+                                              <td>&nbsp;</td>
+                                              <td width="130px">
+                                                <img src="assets-daily/marker.png" style="vertical-align: inherit;">
+                                                <span style="font-size: 12px;">San Francisco, CA</span>
+                                                <div class="weather" style="margin-top: 10px; font-weight: bold;">
+                                                  <img src="assets-daily/sun-cloud.png" width="20px" style="vertical-align: bottom;" class="sun-clound">
+                                                  <span>72 &deg;F</span>
+                                                </div>
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
                                       </td>
                                     </tr>
                                   </tbody>
@@ -494,7 +567,7 @@
                             </tr>
                             <tr>
                               <td>
-                                <table border="0" cellpadding="7" cellspacing="10px" style="margin: 0; border: 1px solid #ccc; border-radius: 3px; padding: 0;">
+                                <table border="0" cellpadding="7" cellspacing="10px" style="margin: 0; padding: 0;">
                                   <tbody>
                                     <tr>
                                       <td class="width50">
@@ -512,28 +585,28 @@
                                                     <tr>
                                                       <td><img src="premeeting/mail.png" alt="mail" class="envelop"></td>
                                                       <td>
-                                                        <span class="fs12">1021</span>
+                                                        <span class="fs12">10/21</span>
                                                         <p class="engagement-p fs12">&quot;when are ou gonna send me stuff&quot;</p>
                                                       </td>
                                                     </tr>
                                                     <tr>
                                                       <td><img src="premeeting/mail.png" alt="mail" class="envelop"></td>
                                                       <td>
-                                                        <span class="fs12">1021</span>
+                                                        <span class="fs12">10/21</span>
                                                         <p class="engagement-p fs12">&quot;when are ou gonna send me stuff&quot;</p>
                                                       </td>
                                                     </tr>
                                                     <tr>
                                                       <td><img src="premeeting/mail.png" alt="mail" class="envelop"></td>
                                                       <td>
-                                                        <span class="fs12">1021</span>
+                                                        <span class="fs12">10/21</span>
                                                         <p class="engagement-p fs12">&quot;when are ou gonna send me stuff&quot;</p>
                                                       </td>
                                                     </tr>
                                                     <tr>
                                                       <td><img src="premeeting/calendar.png" alt="mail" class="envelop"></td>
                                                       <td>
-                                                        <span class="fs12">1021</span>
+                                                        <span class="fs12">10/21</span>
                                                         <p class="engagement-p fs12">&quot;when are ou gonna send me stuff&quot;</p>
                                                       </td>
                                                     </tr>
@@ -559,7 +632,7 @@
                                                     <tr>
                                                       <td><img src="premeeting/mail.png" alt="mail" class="envelop"></td>
                                                       <td>
-                                                        <span class="fs12">1021</span>
+                                                        <span class="fs12">10/21</span>
                                                         <p class="engagement-p fs12">follow up: Get some documents</p>
                                                       </td>
                                                     </tr>
@@ -567,11 +640,22 @@
                                                       <td colspan="2">
                                                         <h3 class="recommend">Recommendations</h3>
                                                         <div class="thanks">
-                                                          <p>Thanks: Survey Successfully Completed</p>
                                                           <p>
-                                                            Follow up: Email with subject &quot; Please send me docs &quot; is not opened with in 1 day.
+                                                            <img src="assets-daily/business-intel.png" width="9px">
+                                                            Thanks: Survey Successfully Completed
                                                           </p>
-                                                          <p>Birthday: Birthday on 12/21/2016</p>
+                                                          <p>
+                                                            <img src="assets-daily/business-intel.png" width="9px">
+                                                            Follow up: Email with subject &quot; Please send me docs &quot; 
+                                                          </p>
+                                                          <p>
+                                                            <img src="assets-daily/business-intel.png" width="9px">
+                                                            is not opened with in 1 day.
+                                                          </p>
+                                                          <p>
+                                                            <img src="assets-daily/business-intel.png" width="9px">
+                                                            Birthday: Birthday on 12/21/2016
+                                                          </p>
                                                         </div>
                                                       </td>
                                                     </tr>
@@ -596,13 +680,18 @@
                                                   <tbody>
                                                     <tr>
                                                       <td>
-                                                        <span class="fs12">1021</span>
-                                                        <p class="engagement-p fs12">&quot;when are ou gonna send me stuff&quot;</p>
+                                                        <span class="fs12">10/21</span>
+                                                        <p class="engagement-p fs12">&quot;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&quot;</p>
                                                       </td>
                                                     </tr>
                                                     <tr>
                                                       <td>
-                                                        <span class="fs12">1021</span>
+                                                        <span class="fs12">10/21</span>
                                                         <p class="engagement-p fs12">&quot;when are ou gonna send me stuff&quot;</p>
                                                       </td>
                                                     </tr>
@@ -627,38 +716,55 @@
                                                   <tbody>
                                                     <tr>
                                                       <td>
-                                                        <p class="engagement-p fs12">NY Jests Expected to Start Juno Smith and they suck...</p>
+                                                        <a href="#">
+                                                          <p class="engagement-p fs12">NY Jests Expected to Start Juno Smith and they suck...</p>
+                                                        </a>
                                                       </td>
 
-                                                      <td><span class="box-square"></span></td>
+                                                      <td>
+                                                        <a href="#">
+                                                          <span class="box-square"></span>
+                                                        </a>
+                                                      </td>
                                                     </tr>
                                                     <tr>
                                                       <td>
-                                                        <p class="engagement-p fs12">NY Jests Expected to Start Juno Smith and they suck...</p>
+                                                        <a href="#">
+                                                          <p class="engagement-p fs12">NY Jests Expected to Start Juno Smith and they suck...</p>
+                                                        </a>
                                                       </td>
 
-                                                      <td><span class="box-square"></span></td>
+                                                      <td>
+                                                        <a href="#">
+                                                          <span class="box-square"></span>
+                                                        </a>
+                                                      </td>
                                                     </tr>
                                                     <tr>
                                                       <td>
-                                                        <p class="engagement-p fs12">NY Jests Expected to Start Juno Smith and they suck...</p>
+                                                        <a href="#">
+                                                          <p class="engagement-p fs12">NY Jests Expected to Start Juno Smith and they suck...</p>
+                                                        </a>
                                                       </td>
 
-                                                      <td><span class="box-square"></span></td>
+                                                      <td>
+                                                        <a href="#">
+                                                          <span class="box-square"></span>
+                                                        </a>
+                                                      </td>
                                                     </tr>
                                                     <tr>
                                                       <td>
-                                                        <p class="engagement-p fs12">NY Jests Expected to Start Juno Smith and they suck...</p>
+                                                        <a href="#">
+                                                          <p class="engagement-p fs12">NY Jests Expected to Start Juno Smith and they suck...</p>
+                                                        </a>
                                                       </td>
 
-                                                      <td><span class="box-square"></span></td>
-                                                    </tr>
-                                                    <tr>
                                                       <td>
-                                                        <p class="engagement-p fs12">NY Jests Expected to Start Juno Smith and they suck...</p>
+                                                        <a href="#">
+                                                          <span class="box-square"></span>
+                                                        </a>
                                                       </td>
-
-                                                      <td><span class="box-square"></span></td>
                                                     </tr>
                                                   </tbody>
                                                 </table>

@@ -44,7 +44,6 @@
         margin: 0 auto !important;
         /* makes it centered */
         max-width: 680px;
-        padding: 10px;
         width: auto !important;
         width: 680px; }
       /* This should also be a block element, so that it will fill 100% of the .container */
@@ -52,8 +51,7 @@
         box-sizing: border-box;
         display: block;
         margin: 0 auto;
-        max-width: 680px;
-        padding: 15px; }
+        max-width: 680px; }
       /* -------------------------------------
           HEADER, FOOTER, MAIN
       ------------------------------------- */
@@ -200,12 +198,16 @@
           margin-bottom: 20px;
         }
 
+        .text-color {
+          color: #444;
+        }
+
         .table td {
           font-size: 13px;
           font-style: italic;
           color: #444;
           border-bottom: 1px solid #ddd;
-          padding: 8px 0;
+          padding: 10px;
         }
 
         .table .active {
@@ -214,7 +216,7 @@
 
         .table td:first-child,
         .header th:first-child {
-          padding-left: 15px;
+          padding: 10px;
         }
 
         .actions-title {
@@ -231,7 +233,7 @@
           background-color: #ffbdaa;
         }
         .header th {
-          padding: 5px 0;
+          padding: 10px;
           color: white;
           font-style: italic;
           text-transform: capitalize;
@@ -259,7 +261,7 @@
         }
         .logo {
           text-align: center;
-          margin: 10px auto;
+          padding: 10px;
         }
 
         .table-recommend tr:nth-of-type(even) td {
@@ -302,223 +304,247 @@
         .social img {
           width: 17px;
         }
+        
+        .container,
+        .content,
         .wrapper {
-          padding: 20px;
+          padding: 0;
+        }
+
+        .welcome-msg {
+          font-size: 13px;
+        }
+
+        @media only screen and (min-width: 480px) {
+          .container {
+            padding: 10px;
+          }
+          .content {
+            padding: 15px;
+          }
+          .wrapper {
+            padding: 20px;
+          }
+          .welcome-msg {
+            font-size: 14px;
+          }
         }
     </style>
   </head>
   <body>
     <table border="0" cellpadding="0" cellspacing="0">
-      <tr>
-        <td class="container" style="background-color: #ebebeb">
-          <div class="logo"><a href="http://www.delighterr.com" target="_blank">
-            <img src="https://dl.dropboxusercontent.com/u/62383170/logo-transparent.png" alt="" width="150px"></a>
-          </div>
-          <div class="content">
-            <span class="preheader">Welcome to Delighterr. We automatically imported your top contacts and you are good to go.</span>
-            <table class="main">
-              <tr>
-                <td class="wrapper">
-                  <table border="0" cellpadding="0" cellspacing="0">
-                    <tr>
-                      <td>
-                        <table border="0" cellpadding="0" cellspacing="0" class="box">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <p>Dear Luke Gotzling,</p>
-                                <p>Good Morning, Here are planned and recommended actions to engage your contacts.</p>
-                              </td>
-                              <td>
-                                <img src="assets-daily/sidebar.gif" alt="access plugin" width="80">
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-
-                        <table border="0" cellpadding="0" cellspacing="0">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <table border="0" cellpadding="2" cellspacing="0" class="table">
-                                  <caption class="actions-title">planned actions</caption>
-                                    <thead>
-                                      <tr class="header">
-                                        <th>contact name</th>
-                                        <th>due date</th>
-                                        <th>action type</th>
-                                        <th>actions</th>
-                                      </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                      <td>Luke Gotzling</td>
-                                      <td>today</td>
-                                      <td>follow up</td>
-                                      <td>
-                                        <a href="mailto:someone@delighterr.com?subject=SUBJECT&body=BODY">start</a>
-                                      </td>
-                                    </tr>
-                                    <tr class="active">
-                                      <td>Luke Gotzling</td>
-                                      <td>today</td>
-                                      <td>follow up</td>
-                                      <td>
-                                        <a href="mailto:someone@delighterr.com?subject=SUBJECT&body=BODY">start</a>
-                                      </td>
-                                    </tr>
-                                    <tr>
-                                      <td>Luke Gotzling</td>
-                                      <td>today</td>
-                                      <td>follow up</td>
-                                      <td>
-                                        <a href="mailto:someone@delighterr.com?subject=SUBJECT&body=BODY">start</a>
-                                      </td>
-                                    </tr>
-                                  </tbody>
-                                </table>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <table border="0" cellpadding="3" cellspacing="0" class="table table-recommend">
-                                  <caption class="actions-title">Recommended Actions</caption>
-                                    <thead>
-                                      <tr class="header">
-                                        <th>contact name</th>
-                                        <th>due date</th>
-                                        <th>action type</th>
-                                        <th>actions</th>
-                                      </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                      <td>Luke Gotzling</td>
-                                      <td>today</td>
-                                      <td>follow up</td>
-                                      <td>
-                                        <a href="mailto:someone@delighterr.com?subject=SUBJECT&body=BODY">start</a>
-                                      </td>
-                                    </tr>
-                                    <tr>
-                                      <td colspan="4">
-                                        <img src="assets-daily/business-intel.png">
-                                        <span>Email with subject Please send me docs is not open within 1 day</span>
-                                      </td>
-                                    </tr>
-                                    <tr>
-                                      <td>Luke Gotzling</td>
-                                      <td>today</td>
-                                      <td>follow up</td>
-                                      <td>
-                                        <a href="mailto:someone@delighterr.com?subject=SUBJECT&body=BODY">start</a>
-                                      </td>
-                                    </tr>
-                                    <tr>
-                                      <td colspan="4">
-                                        <img src="assets-daily/business-intel.png">
-                                        <span>Email with subject Please send me docs is not open within 1 day</span>
-                                      </td>
-                                    </tr>
-                                    <tr>
-                                      <td>Luke Gotzling</td>
-                                      <td>today</td>
-                                      <td>follow up</td>
-                                      <td>
-                                        <a href="mailto:someone@delighterr.com?subject=SUBJECT&body=BODY">start</a>
-                                      </td>
-                                    </tr>
-                                    <tr>
-                                      <td colspan="4">
-                                        <img src="assets-daily/business-intel.png">
-                                        <span>Email with subject Please send me docs is not open within 1 day</span>
-                                      </td>
-                                    </tr>
-                                  </tbody>
-                                </table>
-                              </td>
-                            </tr>
-
-                            <tr>
-                              <td>
-                                <table border="0" cellpadding="0" cellspacing="0">
-                                  <tr>
-                                    <td>
-                                      <h2 class="question">Got Questions or feedback</h2>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>
-                                      <p class="question-desc">
-                                        Love to hear your comments and questions. 
-                                        <a href="#">drop us a note</a>
-                                      </p>
-                                    </td>
-                                  </tr>
-                                </table>
-                              </td>
-                            </tr>
-
-                            <tr>
-                              <td>
-                                <table border="0" cellpadding="0" cellspacing="0" style="margin-bottom: 15px;">
-                                  <tr>
-                                    <td>
-                                      <p style="margin: 0">Thanks and welcome again!</p>
-                                      <span>baker</span>
-                                    </td>
-                                  </tr>
-                                </table>
-                              </td>
-                            </tr>
-
-                            <tr>
-                              <td>
-                                <table border="0" cellpadding="0" cellspacing="0">
-                                  <tr>
-                                    <td class="contact">
-                                      <p><strong>Baker Nanduru</strong></p>
-                                      <p>Founder & CEO</p>
-                                      <p>(480) 829-6718</p>
-                                      <p>baker@delighterr.com</p>
-                                    </td>
-                                  </tr>
-                                </table>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-            </table>
-
-
-            <table border="0" cellpadding="0" cellspacing="0" class="footer">
-              <tbody>
+      <tbody style="background-color: #ebebeb">
+        <tr>
+          <td class="container" style="background-color: #ebebeb">
+            <div class="logo"><a href="http://www.delighterr.com" target="_blank">
+              <img src="https://dl.dropboxusercontent.com/u/62383170/logo-transparent.png" alt="" width="150px"></a>
+            </div>
+            <div class="content">
+              <span class="preheader">Welcome to Delighterr. We automatically imported your top contacts and you are good to go.</span>
+              <table class="main">
                 <tr>
-                  <td>
-                    <ul style="list-style: none" class="terms clear-space">
-                      <li>© Delighterr Inc 2016</li>
-                      <li><a href="http://www.delighterr.com/privacy">Privacy Policy</a></li>
-                      <li><a href="http://www.delighterr.com/terms">Terms</a></li>
-                    </ul>
-                  </td>
-                  <td>
-                    <ul class="social clear-space" style="list-style: none">
-                      <li><a href="https://www.linkedin.com/company/delighterr-inc" target="_blank"><img src="https://dl.dropboxusercontent.com/u/62383170/linkedin.png"></a></li>
-                      <li><a href="https://twitter.com/delighterrinc" target="_blank"><img src="https://dl.dropboxusercontent.com/u/62383170/twitter.png"></a></li>
-                    </ul>
+                  <td class="wrapper">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td>
+                          <table border="0" cellpadding="0" cellspacing="0" class="box">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <p class="text-color">Dear Luke Gotzling,</p>
+                                  <p class="text-color welcome-msg">Good Morning, Here are planned and recommended actions to engage your contacts.</p>
+                                </td>
+                                <td>
+                                  <img src="https://dl.dropboxusercontent.com/u/62383170/sidebar.gif" alt="access plugin" width="80">
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+
+                          <table border="0" cellpadding="0" cellspacing="0">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <table border="0" cellpadding="2" cellspacing="0" class="table">
+                                    <caption class="actions-title">planned actions</caption>
+                                      <thead>
+                                        <tr class="header">
+                                          <th width="25%">contact name</th>
+                                          <th width="25%">due date</th>
+                                          <th width="25%">action type</th>
+                                          <th width="25%">actions</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                      <tr>
+                                        <td  width="25%">luke.fabian@delighterr.onmicrosoft.com</td>
+                                        <td  width="25%">today</td>
+                                        <td  width="25%">follow up</td>
+                                        <td  width="25%">
+                                          <a href="mailto:someone@delighterr.com?subject=SUBJECT&body=BODY">start</a>
+                                        </td>
+                                      </tr>
+                                      <tr class="active">
+                                        <td  width="25%">Luke Gotzling</td>
+                                        <td  width="25%">today</td>
+                                        <td  width="25%">follow up</td>
+                                        <td  width="25%">
+                                          <a href="mailto:someone@delighterr.com?subject=SUBJECT&body=BODY">start</a>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td  width="25%">Luke Gotzling</td>
+                                        <td  width="25%">today</td>
+                                        <td  width="25%">follow up</td>
+                                        <td  width="25%">
+                                          <a href="mailto:someone@delighterr.com?subject=SUBJECT&body=BODY">start</a>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <table border="0" cellpadding="3" cellspacing="0" class="table table-recommend">
+                                    <caption class="actions-title">Recommended Actions</caption>
+                                      <thead>
+                                        <tr class="header">
+                                          <th>contact name</th>
+                                          <th>due date</th>
+                                          <th>action type</th>
+                                          <th>actions</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                      <tr>
+                                        <td>Luke Gotzling</td>
+                                        <td>today</td>
+                                        <td>follow up</td>
+                                        <td>
+                                          <a href="mailto:someone@delighterr.com?subject=SUBJECT&body=BODY">start</a>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td colspan="4">
+                                          <img src="https://dl.dropboxusercontent.com/u/62383170/business-intel.png">
+                                          <span>Email with subject Please send me docs is not open within 1 day</span>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>Luke Gotzling</td>
+                                        <td>today</td>
+                                        <td>follow up</td>
+                                        <td>
+                                          <a href="mailto:someone@delighterr.com?subject=SUBJECT&body=BODY">start</a>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td colspan="4">
+                                          <img src="https://dl.dropboxusercontent.com/u/62383170/business-intel.png">
+                                          <span>Email with subject Please send me docs is not open within 1 day</span>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>Luke Gotzling</td>
+                                        <td>today</td>
+                                        <td>follow up</td>
+                                        <td>
+                                          <a href="mailto:someone@delighterr.com?subject=SUBJECT&body=BODY">start</a>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td colspan="4">
+                                          <img src="https://dl.dropboxusercontent.com/u/62383170/business-intel.png">
+                                          <span>Email with subject Please send me docs is not open within 1 day</span>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td>
+                                  <table border="0" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                      <td>
+                                        <h2 class="question text-color">Got Questions or feedback</h2>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <p class="question-desc text-color">
+                                          Love to hear your comments and questions. 
+                                          <a href="#">drop us a note</a>
+                                        </p>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td>
+                                  <table border="0" cellpadding="0" cellspacing="0" style="margin-bottom: 15px;">
+                                    <tr>
+                                      <td>
+                                        <p style="margin: 0" class="text-color">Thanks and welcome again!</p>
+                                        <span class="text-color">baker</span>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td>
+                                  <table border="0" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                      <td class="contact">
+                                        <p class="text-color"><strong>Baker Nanduru</strong></p>
+                                        <p class="text-color">Founder & CEO</p>
+                                        <p class="text-color">(480) 829-6718</p>
+                                        <p class="text-color">baker@delighterr.com</p>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
                   </td>
                 </tr>
-              </tbody>
-            </table>
+              </table>
 
-          </div>
-        </td>
-      </tr>
+
+              <table border="0" cellpadding="0" cellspacing="0" class="footer">
+                <tbody>
+                  <tr>
+                    <td>
+                      <ul style="list-style: none" class="terms clear-space">
+                        <li>© Delighterr Inc 2016</li>
+                        <li><a href="http://www.delighterr.com/privacy">Privacy Policy</a></li>
+                        <li><a href="http://www.delighterr.com/terms">Terms</a></li>
+                      </ul>
+                    </td>
+                    <td>
+                      <ul class="social clear-space" style="list-style: none">
+                        <li><a href="https://www.linkedin.com/company/delighterr-inc" target="_blank"><img src="https://dl.dropboxusercontent.com/u/62383170/linkedin.png"></a></li>
+                        <li><a href="https://twitter.com/delighterrinc" target="_blank"><img src="https://dl.dropboxusercontent.com/u/62383170/twitter.png"></a></li>
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+          </td>
+        </tr>
+      </tbody>
     </table>
   </body>
 </html>

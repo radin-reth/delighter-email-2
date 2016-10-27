@@ -5,601 +5,286 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Onboarding Email</title>
     <style>
-      /* -------------------------------------
-          GLOBAL RESETS
-      ------------------------------------- */
-      img {
-        border: none;
-        -ms-interpolation-mode: bicubic;
-        max-width: 100%; }
-      body {
-        background-color: #f6f6f6;
-        font-family: sans-serif;
-        -webkit-font-smoothing: antialiased;
-        font-size: 14px;
-        line-height: 1.4;
-        margin: 0;
-        padding: 0;
-        -ms-text-size-adjust: 100%;
-        -webkit-text-size-adjust: 100%; }
-      table {
-        border-collapse: separate;
-        background-color: white;
-        mso-table-lspace: 0pt;
-        mso-table-rspace: 0pt;
-        width: 100%; }
-        table td {
-          font-family: sans-serif;
-          font-size: 14px;
-          vertical-align: top; }
-      /* -------------------------------------
-          BODY & CONTAINER
-      ------------------------------------- */
-      .body {
-        background-color: #f6f6f6;
-        width: 100%; }
-      /* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
-      .container {
-        display: block;
-        margin: 0 auto !important;
-        /* makes it centered */
-        max-width: 680px;
-        padding: 10px;
-        width: auto !important;
-        width: 680px; }
-      /* This should also be a block element, so that it will fill 100% of the .container */
-      .content {
-        box-sizing: border-box;
-        display: block;
-        Margin: 0 auto;
-        max-width: 680px;
-        padding: 10px; }
-      /* -------------------------------------
-          HEADER, FOOTER, MAIN
-      ------------------------------------- */
-      .main {
-        background: #fff;
-        border-radius: 3px;
-        width: 100%; }
-      .wrapper {
-        box-sizing: border-box; }
-      .footer {
-        clear: both;
-        padding-top: 10px;
-        text-align: center;
-        width: 100%; }
-        .footer td,
-        .footer p,
-        .footer span,
-        .footer a {
-          color: #999999;
-          font-size: 12px;
-          text-align: center; }
-      /* -------------------------------------
-          TYPOGRAPHY
-      ------------------------------------- */
-      h1,
-      h2,
-      h3,
-      h4 {
-        color: #000000;
-        font-family: sans-serif;
-        font-weight: 400;
-        line-height: 1.4;
-        margin: 0;
-        Margin-bottom: 30px; }
-      h1 {
-        font-size: 35px;
-        font-weight: 300;
-        text-align: center;
-        text-transform: capitalize; }
-      p,
-      ul,
-      ol {
-        font-family: sans-serif;
-        font-size: 14px;
-        font-weight: normal;
-        margin: 0;
-        Margin-bottom: 15px; }
-        p li,
-        ul li,
-        ol li {
-          list-style-position: inside;
-          margin-left: 5px; }
-      a {
-        color: #3498db;
-        text-decoration: underline; }
-      /* -------------------------------------
-          BUTTONS
-      ------------------------------------- */
-      .btn {
-        box-sizing: border-box;
-        width: 100%; }
-        .btn table {
-          width: auto; }
-        .btn table td {
-          background-color: #ffffff;
-          border-radius: 5px;
-          text-align: center; }
-      .btn-primary table td {
-        background-color: #3498db; }
-      /* -------------------------------------
-          OTHER STYLES THAT MIGHT BE USEFUL
-      ------------------------------------- */
-      .last {
-        margin-bottom: 0; }
-      .first {
-        margin-top: 0; }
-      .align-center {
-        text-align: center; }
-      .align-right {
-        text-align: right; }
-      .align-left {
-        text-align: left; }
-      .clear {
-        clear: both; }
-      .mt0 {
-        margin-top: 0; }
-      .mb0 {
-        margin-bottom: 0; }
-      .preheader {
-        color: transparent;
-        display: none;
-        height: 0;
-        max-height: 0;
-        max-width: 0;
-        opacity: 0;
-        overflow: hidden;
-        mso-hide: all;
-        visibility: hidden;
-        width: 0; }
-      .powered-by a {
-        text-decoration: none; }
-      hr {
-        border: 0;
-        border-bottom: 1px solid #f6f6f6;
-        Margin: 20px 0; }
-      /* -------------------------------------
-          RESPONSIVE AND MOBILE FRIENDLY STYLES
-      ------------------------------------- */
+      @media only screen and (min-width: 480px) {
+        .block {
+          display: table-cell !important;
+        }
+      }
+
+      @media only screen and (min-width: 768px) {
+        .silver-wrapper {
+          padding: 0 15px;
+        }
+
+        .plan-td {
+          width: 33.33%;
+        }
+      }
+
       @media only screen and (max-width: 768px) {
-        table[class=body] h1 {
-          font-size: 28px !important;
-          margin-bottom: 10px !important; }
-        table[class=body] p,
-        table[class=body] ul,
-        table[class=body] ol,
-        table[class=body] td,
-        table[class=body] span,
-        table[class=body] a {
-          font-size: 16px !important; }
-        table[class=body] .wrapper,
-        table[class=body] .article {
-          padding: 10px !important; }
-        table[class=body] .content {
-          padding: 0 !important; }
-        table[class=body] .container {
-          padding: 0 !important;
-          width: 100% !important; }
-        table[class=body] .main {
-          border-left-width: 0 !important;
-          border-radius: 0 !important;
-          border-right-width: 0 !important; }
-        table[class=body] .btn table {
-          width: 100% !important; }
-        table[class=body] .btn a {
-          width: 100% !important; }
-        table[class=body] .img-responsive {
-          height: auto !important;
-          max-width: 100% !important;
-          width: auto !important; }
-        table td {
-          display: block; }}
+        .footer .social, .footer .terms {
+          text-align: center;
+        }
+
+        .footer .social {
+          margin-top: 10px;
+        }
 
         .plan {
-          border: 1px solid #ccc;
-          border-radius: 3px;
+          margin-bottom: 15px;
         }
-        .plan table td {
-          display: table-cell;
-        }
-
-        .platinum {
-          background-color: #b5f3d4;
-          border-color: #b5f3d4;
-        }
-
-        .title-platinum {
-          border-bottom: 6px solid #83e0b2 !important;
-        }
-
-        .silver {
-          background-color: #dbdcf0;
-          border-color: #dbdcf0;
-        }
-
-        .title-silver {
-          border-bottom: 6px solid #c4c5e6 !important;
-        }
-
-        .bronze {
-          background-color: #f79f49;
-          border-color: #f79f49;
-        }
-
-        .title-bronze {
-          border-bottom: 6px solid #e48425 !important;
-        }
-        .title {
-          border-bottom: 1px solid #ccc; }
-          .title h1 {
-            font-size: 15px;
-            font-weight: bold;
-            color: #444;
-            margin: 5px auto 0; }
-          .title p {
-            color: #5d5d5d;
-            margin-bottom: 9px;
-            text-align: center;
-            font-style: italic;
-            font-size: 12px }
-        .body td {
-          font-size: 13px; }
-        .body > table {
-          padding: 10px; }
-
-        .box {
-          padding: 15px; }
-
-        .what-next,
-        .question {
-          font-size: 15px;
-          margin: 15px 0 0;
-        }
-
-        li {
-          list-style-position: outside !important;
-        }
-
-        .clear-space {
-          margin: 0;
-          padding: 0;
-        }
-
-        .terms {
-          font-size: 12px;
-        }
-
-        .terms, .social {
-          list-style: none }
-          .terms li, .social li {
-            display: inline-block; }
-
-        .footer {
-          background: transparent;
-          margin-top: 15px;
-          padding: 0;
-        }
-
-        .footer ul {
-          text-align: left;
-        }
-
-        .social img {
-          width: 17px;
-        }
-
-        .plan td {
-          max-width: 100px;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          white-space: nowrap;
-          text-align: center;
-        }
-
-        .plan > .footer {
-          margin: 0;
-          font-weight: bold;
-          text-align: center;
-          font-size: 10px;
-          padding: 5px 0;
-          background: white;
-          color: #777;
-          font-style: italic;
-        }
-
-        .plan-footer-platinum {
-          border-top: 1px solid #b5f3d4;
-        }
-
-        .plan-footer-silver {
-          border-top: 1px solid #c4c5e6;
-        }
-
-        .plan-footer-bronze {
-          border-top: 1px solid #e48425;
-        }
-
-        .logo {
-            text-align: center;
-            margin: 5px;
-          }
-
-        @media only screen and (min-width: 768px) {
-          .silver-wrapper {
-            padding: 0 15px;
-          }
-
-          .plan-td {
-            width: 33.33%;
-          }
-        }
-
-        @media only screen and (max-width: 768px) {
-          .footer .social, .footer .terms {
-            text-align: center;
-          }
-
-          .footer .social {
-            margin-top: 10px;
-          }
-
-          .plan {
-            margin-bottom: 15px;
-          }
-        }
+      }
     </style>
   </head>
-  <body>
-    <table border="0" cellpadding="0" cellspacing="0">
-      <tr>
-        <td></td>
-        <td class="container" style="background-color: #ebebeb">
-          <div class="logo"><a href="http://www.delighterr.com" target="_blank">
-            <img src="https://dl.dropboxusercontent.com/u/62383170/logo-transparent.png" alt="" width="150px"></a>
-          </div>
-          <div class="content">
+  <body style="background-color:#f6f6f6;font-family:sans-serif;-webkit-font-smoothing:antialiased;font-size:14px;line-height:1.4;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;color:#444;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;background-color:white;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;" >
+      <tbody style="background-color:#ebebeb;" >
+        <tr>
+          <td class="container" style="background-color:#ebebeb;font-family:sans-serif;font-size:14px;vertical-align:top;display:block;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;max-width:680px;width:auto !important;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+            <div class="logo" style="text-align:center;padding-top:13px;padding-bottom:13px;padding-right:13px;padding-left:13px;" ><a href="http://www.delighterr.com" target="_blank" style="color:#3498db;text-decoration:underline;" >
+              <img src="https://dl.dropboxusercontent.com/u/62383170/logo-transparent.png" alt="" width="150px" style="border-style:none;-ms-interpolation-mode:bicubic;max-width:100%;" ></a>
+            </div>
+            <div class="content" style="box-sizing:border-box;display:block;Margin:0 auto;max-width:680px;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+              <span class="preheader" style="color:transparent;display:none;height:0;max-height:0;max-width:0;opacity:0;overflow:hidden;mso-hide:all;visibility:hidden;width:0;" >Welcome to Delighterr. We automatically imported your top contacts and you are good to go.</span>
+              <table class="main" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;background-color:#fff;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;border-radius:3px;width:100%;" >
 
-            <!-- START CENTERED WHITE CONTAINER -->
-            <span class="preheader">Welcome to Delighterr. We automatically imported your top contacts and you are good to go.</span>
-            <table class="main">
-
-              <!-- START MAIN CONTENT AREA -->
-              <tr>
-                <td class="wrapper">
-                  <table border="0" cellpadding="0" cellspacing="0">
-                    <tr>
-                      <td>
-                        <table border="0" cellpadding="0" cellspacing="0" class="box">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <p>Dear Luke Gotzling,</p>
-                                <p>Thanks for downloading Delighterr plugin. We are excited to help you engage all your clients, prospects and colleagues in more meaningful ways.</p>
-
-                                <p>Delighterr analyzed your past email and calendar activities and based on that we have automatically imported top 50 contacts and assigned predefined engagement plans as shown below. You can remove or change the contacts and engagement plans in the plug in.</p>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <table border="0" cellpadding="0" cellspacing="0">
-                          <tbody>
-                            <tr>
-                              <td align="left" class="plan-td">
-                                <table border="0" cellpadding="0" cellspacing="0">
-                                  <tbody>
-                                    <tr>
-                                      <td>
-                                        <div class="plan platinum">
-                                          <div class="title title-platinum">
-                                            <h1>platinum plan</h1>
-                                            <p>Engage: Once a Week</p>
-                                          </div>
-
-                                          <div class="body">
-                                            <table border="0" cellpadding="2" cellspacing="2">
-                                              <tbody>
-                                                <tr>
-                                                  <td>David Ulevitch</td>
-                                                </tr>
-                                                <tr>
-                                                  <td>Sridhar Ramanathan</td>
-                                                </tr>
-                                                <tr>
-                                                  <td>Chantale Hansen</td>
-                                                </tr>
-                                                <tr>
-                                                  <td>Jesper Frederiksen</td>
-                                                </tr>
-                                                <tr>
-                                                  <td>Baker Nanduru </td>
-                                                </tr>
-                                                <tr>
-                                                  <td>Baker Nanduru </td>
-                                                </tr>
-                                              </tbody>
-                                            </table>
-                                          </div>
-
-                                          <p class="footer plan-footer-platinum">7 out of 20 contacts</p>
-                                        </div>
-                                      </td>
-                                    </tr>
-                                  </tbody>
-                                </table>
-                              </td>
-                              <td align="left" class="silver-wrapper plan-td">
-                                <table border="0" cellpadding="0" cellspacing="0">
-                                  <tbody>
-                                    <tr>
-                                      <td>
-                                        <div class="plan silver">
-                                          <div class="title title-silver">
-                                            <h1>silver plan</h1>
-                                            <p>Engage: Once a Week</p>
-                                          </div>
-
-                                          <div class="body">
-                                            <table border="0" cellpadding="2" cellspacing="2">
-                                              <tbody>
-                                                <tr>
-                                                  <td>Baker Nanduru </td>
-                                                </tr>
-                                                <tr>
-                                                  <td>Eric Markowitz</td>
-                                                </tr>
-                                                <tr>
-                                                  <td>Fabian cabeu</td>
-                                                </tr>
-                                                <tr>
-                                                  <td>Baker Nanduru </td>
-                                                </tr>
-                                                <tr>
-                                                  <td>Fabian cabeu</td>
-                                                </tr>
-                                                <tr>
-                                                  <td>Dave Sobocinski</td>
-                                                </tr>
-                                              </tbody>
-                                            </table>
-                                          </div>
-
-                                          <p class="footer plan-footer-silver">7 out of 20 contacts</p>
-                                        </div>
-                                      </td>
-                                    </tr>
-                                  </tbody>
-                                </table>
-                              </td>
-                              <td align="left" class="plan-td">
-                                <table border="0" cellpadding="0" cellspacing="0">
-                                  <tbody>
-                                    <tr>
-                                      <td>
-                                        <div class="plan bronze">
-                                          <div class="title title-bronze">
-                                            <h1>bronze plan</h1>
-                                            <p>Engage: Once a Month</p>
-                                          </div>
-
-                                          <div class="body">
-                                            <table border="0" cellpadding="2" cellspacing="2">
-                                              <tbody>
-                                                <tr>
-                                                  <td>Baker Nanduru </td>
-                                                </tr>
-                                                <tr>
-                                                  <td>Baker Nanduru </td>
-                                                </tr>
-                                                <tr>
-                                                  <td>Fabian cabeu</td>
-                                                </tr>
-                                                <tr>
-                                                  <td>Baker Nanduru </td>
-                                                </tr>
-                                                <tr>
-                                                  <td>Fabian cabeu</td>
-                                                </tr>
-                                                <tr>
-                                                  <td>Baker Nanduru </td>
-                                                </tr>
-                                              </tbody>
-                                            </table>
-                                          </div>
-
-                                          <p class="footer plan-footer-bronze">7 out of 20 contacts</p>
-                                        </div>
-                                      </td>
-                                    </tr>
-                                  </tbody>
-                                </table>
-                              </td>
-                            </tr>
-                            <tr>
-                              <table border="0" cellpadding="0" cellspacing="0" class="btn btn-primary box">
-                                <tbody>
-                                  <tr>
-                                    <td><h5 class="what-next">What next?</h5></td>
-                                  </tr>
-                                  <tr>
-                                    <td>
-                                      <ul>
-                                        <li class="asterisk">
-                                          <a href="https://delighterr.wistia.com/medias/6vukcxms8t" target="_blank">Watch a video on how to use delighterr</a>
-                                        </li>
-                                        <li class="asterisk">
-                                          <span>Check daily planned and recommended actions for all your contacts from plug in MENU icon. we will also send you a daily reminder</span>
-                                        </li>
-                                      </ul>
-                                    </td>
-                                  </tr>
-
-                                  <tr>
-                                    <td>
-                                      <h5 class="question">Got Questions or Feedback</h5>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>
-                                      <p>Love to hear your comments and questions.
-                                        Please <a href="mailto:info@delighterr.com?Subject=Feedback/Questions" target="_top">Drop us a note</a>
-                                      </p>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td><span>Thanks and welcome again!</span></td>
-                                  </tr>
-                                  <tr>
-                                    <td>
-                                      <p>Baker</p>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>
-                                      <strong>Baker Nanduru</strong>
-                                      <p class="clear-space">Founder & CEO</p>
-                                      <p class="clear-space">(408) 829-6718</p>
-                                      <p class="clear-space">baker@delighterr.com</p>
-                                    </td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </td>
-                    </tr>
-                  </table>
-                  <table border="0" cellpadding="0" cellspacing="0" class="footer">
-                    <tbody>
+                <!-- START MAIN CONTENT AREA -->
+                <tr>
+                  <td class="wrapper" style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;font-family:sans-serif;font-size:14px;vertical-align:top;box-sizing:border-box;" >
+                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;background-color:white;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;" >
                       <tr>
-                        <td>
-                          <ul style="list-style: none" class="terms clear-space">
-                            <li>&copy; Delighterr Inc 2016</li>
-                            <li><a href="http://www.delighterr.com/privacy">Privacy Policy</a></li>
-                            <li><a href="http://www.delighterr.com/terms">Terms</a></li>
-                          </ul>
-                        </td>
-                        <td>
-                          <ul class="social clear-space" style="list-style: none">
-                            <li><a href="https://www.linkedin.com/company/delighterr-inc" target="_blank"><img src="https://dl.dropboxusercontent.com/u/62383170/linkedin.png"></a></li>
-                            <li><a href="https://twitter.com/delighterrinc" target="_blank"><img src="https://dl.dropboxusercontent.com/u/62383170/twitter.png"></a></a></li>
-                          </ul>
+                        <td style="font-family:sans-serif;font-size:14px;vertical-align:top;" >
+                          <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;background-color:white;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;" >
+                            <tbody>
+                              <tr>
+                                <td style="font-family:sans-serif;font-size:14px;vertical-align:top;" >
+                                  <p style="margin-top:20px;font-family:sans-serif;font-size:14px;font-weight:normal;margin-bottom:0;margin-right:0;margin-left:0;Margin-bottom:15px;" >Dear Luke Gotzling,</p>
+                                  <p style="font-family:sans-serif;font-size:14px;font-weight:normal;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;Margin-bottom:15px;" >Thanks for downloading Delighterr plugin. We are excited to help you engage all your clients, prospects and colleagues in more meaningful ways.</p>
+
+                                  <p style="font-family:sans-serif;font-size:14px;font-weight:normal;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;Margin-bottom:15px;" >Delighterr analyzed your past email and calendar activities and based on that we have automatically imported top 50 contacts and assigned predefined engagement plans as shown below. You can remove or change the contacts and engagement plans in the plug in.</p>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;background-color:white;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;" >
+                            <tbody>
+                              <tr>
+                                <td align="left" class="plan-td block" style="font-family:sans-serif;font-size:14px;vertical-align:top;display:block;margin-bottom:20px;" >
+                                  <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;background-color:white;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;" >
+                                    <tbody>
+                                      <tr>
+                                        <td style="font-family:sans-serif;font-size:14px;vertical-align:top;" >
+                                          <div class="plan platinum" style="border-width:1px;border-style:solid;border-radius:3px;background-color:#b5f3d4;border-color:#b5f3d4;" >
+                                            <div class="title title-platinum" style="border-bottom-width:6px !important;border-bottom-style:solid !important;border-bottom-color:#83e0b2 !important;" >
+                                              <h1 style="font-family:sans-serif;line-height:1.4;Margin-bottom:30px;text-align:center;text-transform:capitalize;font-size:15px;font-weight:bold;color:#444;margin-top:5px;margin-bottom:0;margin-right:auto;margin-left:auto;" >platinum plan</h1>
+                                              <p style="font-family:sans-serif;font-weight:normal;margin-top:0;margin-right:0;margin-left:0;Margin-bottom:15px;color:#5d5d5d;margin-bottom:9px;text-align:center;font-style:italic;font-size:12px;" >Engage: Once a Week</p>
+                                            </div>
+
+                                            <div class="body" style="background-color:#f6f6f6;width:100%;" >
+                                              <table border="0" cellpadding="2" cellspacing="2" style="border-collapse:separate;background-color:white;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >
+                                                <tbody>
+                                                  <tr>
+                                                    <td style="font-family:sans-serif;vertical-align:top;font-size:13px;max-width:100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:center;display:table-cell;" >David Ulevitch</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td style="font-family:sans-serif;vertical-align:top;font-size:13px;max-width:100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:center;display:table-cell;" >Sridhar Ramanathan</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td style="font-family:sans-serif;vertical-align:top;font-size:13px;max-width:100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:center;display:table-cell;" >Chantale Hansen</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td style="font-family:sans-serif;vertical-align:top;font-size:13px;max-width:100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:center;display:table-cell;" >Jesper Frederiksen</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td style="font-family:sans-serif;vertical-align:top;font-size:13px;max-width:100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:center;display:table-cell;" >Baker Nanduru </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td style="font-family:sans-serif;vertical-align:top;font-size:13px;max-width:100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:center;display:table-cell;" >Baker Nanduru </td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                            </div>
+
+                                            <p class="footer plan-footer-platinum" style="font-family:sans-serif;Margin-bottom:15px;clear:both;width:100%;border-top-width:1px;border-top-style:solid;border-top-color:#b5f3d4;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;font-weight:bold;text-align:center;font-size:10px;padding-top:5px;padding-bottom:5px;padding-right:0;padding-left:0;background-color:white;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;color:#777;font-style:italic;" >7 out of 20 contacts</p>
+                                          </div>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                                <td align="left" class="silver-wrapper plan-td block" style="font-family:sans-serif;font-size:14px;vertical-align:top;display:block;margin-bottom:20px;" >
+                                  <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;background-color:white;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;" >
+                                    <tbody>
+                                      <tr>
+                                        <td style="font-family:sans-serif;font-size:14px;vertical-align:top;" >
+                                          <div class="plan silver" style="border-width:1px;border-style:solid;border-radius:3px;background-color:#dbdcf0;border-color:#dbdcf0;" >
+                                            <div class="title title-silver" style="border-bottom-width:6px !important;border-bottom-style:solid !important;border-bottom-color:#c4c5e6 !important;" >
+                                              <h1 style="font-family:sans-serif;line-height:1.4;Margin-bottom:30px;text-align:center;text-transform:capitalize;font-size:15px;font-weight:bold;color:#444;margin-top:5px;margin-bottom:0;margin-right:auto;margin-left:auto;" >silver plan</h1>
+                                              <p style="font-family:sans-serif;font-weight:normal;margin-top:0;margin-right:0;margin-left:0;Margin-bottom:15px;color:#5d5d5d;margin-bottom:9px;text-align:center;font-style:italic;font-size:12px;" >Engage: Once a Week</p>
+                                            </div>
+
+                                            <div class="body" style="background-color:#f6f6f6;width:100%;" >
+                                              <table border="0" cellpadding="2" cellspacing="2" style="border-collapse:separate;background-color:white;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >
+                                                <tbody>
+                                                  <tr>
+                                                    <td style="font-family:sans-serif;vertical-align:top;font-size:13px;max-width:100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:center;display:table-cell;" >Baker Nanduru </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td style="font-family:sans-serif;vertical-align:top;font-size:13px;max-width:100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:center;display:table-cell;" >Eric Markowitz</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td style="font-family:sans-serif;vertical-align:top;font-size:13px;max-width:100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:center;display:table-cell;" >Fabian cabeu</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td style="font-family:sans-serif;vertical-align:top;font-size:13px;max-width:100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:center;display:table-cell;" >Baker Nanduru </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td style="font-family:sans-serif;vertical-align:top;font-size:13px;max-width:100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:center;display:table-cell;" >Fabian cabeu</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td style="font-family:sans-serif;vertical-align:top;font-size:13px;max-width:100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:center;display:table-cell;" >Dave Sobocinski</td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                            </div>
+
+                                            <p class="footer plan-footer-silver" style="font-family:sans-serif;Margin-bottom:15px;clear:both;width:100%;border-top-width:1px;border-top-style:solid;border-top-color:#c4c5e6;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;font-weight:bold;text-align:center;font-size:10px;padding-top:5px;padding-bottom:5px;padding-right:0;padding-left:0;background-color:white;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;color:#777;font-style:italic;" >7 out of 20 contacts</p>
+                                          </div>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                                <td align="left" class="plan-td block" style="font-family:sans-serif;font-size:14px;vertical-align:top;display:block;margin-bottom:20px;" >
+                                  <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;background-color:white;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;" >
+                                    <tbody>
+                                      <tr>
+                                        <td style="font-family:sans-serif;font-size:14px;vertical-align:top;" >
+                                          <div class="plan bronze" style="border-width:1px;border-style:solid;border-radius:3px;background-color:#f79f49;border-color:#f79f49;" >
+                                            <div class="title title-bronze" style="border-bottom-width:6px !important;border-bottom-style:solid !important;border-bottom-color:#e48425 !important;" >
+                                              <h1 style="font-family:sans-serif;line-height:1.4;Margin-bottom:30px;text-align:center;text-transform:capitalize;font-size:15px;font-weight:bold;color:#444;margin-top:5px;margin-bottom:0;margin-right:auto;margin-left:auto;" >bronze plan</h1>
+                                              <p style="font-family:sans-serif;font-weight:normal;margin-top:0;margin-right:0;margin-left:0;Margin-bottom:15px;color:#5d5d5d;margin-bottom:9px;text-align:center;font-style:italic;font-size:12px;" >Engage: Once a Month</p>
+                                            </div>
+
+                                            <div class="body" style="background-color:#f6f6f6;width:100%;" >
+                                              <table border="0" cellpadding="2" cellspacing="2" style="border-collapse:separate;background-color:white;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >
+                                                <tbody>
+                                                  <tr>
+                                                    <td style="font-family:sans-serif;vertical-align:top;font-size:13px;max-width:100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:center;display:table-cell;" >Baker Nanduru </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td style="font-family:sans-serif;vertical-align:top;font-size:13px;max-width:100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:center;display:table-cell;" >Baker Nanduru </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td style="font-family:sans-serif;vertical-align:top;font-size:13px;max-width:100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:center;display:table-cell;" >Fabian cabeu</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td style="font-family:sans-serif;vertical-align:top;font-size:13px;max-width:100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:center;display:table-cell;" >Baker Nanduru </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td style="font-family:sans-serif;vertical-align:top;font-size:13px;max-width:100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:center;display:table-cell;" >Fabian cabeu</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td style="font-family:sans-serif;vertical-align:top;font-size:13px;max-width:100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:center;display:table-cell;" >Baker Nanduru </td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                            </div>
+
+                                            <p class="footer plan-footer-bronze" style="font-family:sans-serif;Margin-bottom:15px;clear:both;width:100%;border-top-width:1px;border-top-style:solid;border-top-color:#e48425;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;font-weight:bold;text-align:center;font-size:10px;padding-top:5px;padding-bottom:5px;padding-right:0;padding-left:0;background-color:white;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;color:#777;font-style:italic;" >7 out of 20 contacts</p>
+                                          </div>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td colspan="3" style="font-family:sans-serif;font-size:14px;vertical-align:top;" >
+                                  <table border="0" cellpadding="0" cellspacing="0" class="btn btn-primary" style="border-collapse:separate;background-color:white;mso-table-lspace:0pt;mso-table-rspace:0pt;box-sizing:border-box;width:100%;" >
+                                    <tbody>
+                                      <tr>
+                                        <td style="font-family:sans-serif;font-size:14px;vertical-align:top;" ><h5 class="what-next" style="font-size:15px;margin-top:15px;margin-bottom:0;margin-right:0;margin-left:0;" >What next?</h5></td>
+                                      </tr>
+                                      <tr>
+                                        <td width="100%" style="font-family:sans-serif;font-size:14px;vertical-align:top;" >
+                                          <ul style="font-family:sans-serif;font-size:14px;font-weight:normal;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;Margin-bottom:15px;" >
+                                            <li class="asterisk" style="list-style-position:outside !important;margin-left:5px;" >
+                                              <a href="https://delighterr.wistia.com/medias/6vukcxms8t" target="_blank" style="color:#3498db;text-decoration:underline;" >Watch a video on how to use delighterr</a>
+                                            </li>
+                                            <li class="asterisk" style="list-style-position:outside !important;margin-left:5px;" >
+                                              <span>Check daily planned and recommended actions for all your contacts from plug in MENU icon. we will also send you a daily reminder</span>
+                                            </li>
+                                          </ul>
+                                        </td>
+                                      </tr>
+
+                                      <tr>
+                                        <td style="font-family:sans-serif;font-size:14px;vertical-align:top;" >
+                                          <h5 class="question" style="font-size:15px;margin-top:15px;margin-bottom:0;margin-right:0;margin-left:0;" >Got Questions or Feedback</h5>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td style="font-family:sans-serif;font-size:14px;vertical-align:top;" >
+                                          <p style="font-family:sans-serif;font-size:14px;font-weight:normal;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;Margin-bottom:15px;" >Love to hear your comments and questions.
+                                            Please <a href="mailto:info@delighterr.com?Subject=Feedback/Questions" target="_top" style="color:#3498db;text-decoration:underline;" >Drop us a note</a>
+                                          </p>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td style="font-family:sans-serif;font-size:14px;vertical-align:top;" ><span>Thanks and welcome again!</span></td>
+                                      </tr>
+                                      <tr>
+                                        <td style="font-family:sans-serif;font-size:14px;vertical-align:top;" >
+                                          <p style="font-family:sans-serif;font-size:14px;font-weight:normal;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;Margin-bottom:15px;" >Baker</p>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td style="font-family:sans-serif;font-size:14px;vertical-align:top;" >
+                                          <strong>Baker Nanduru</strong>
+                                          <p class="clear-space" style="font-family:sans-serif;font-size:14px;font-weight:normal;Margin-bottom:15px;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >Founder & CEO</p>
+                                          <p class="clear-space" style="font-family:sans-serif;font-size:14px;font-weight:normal;Margin-bottom:15px;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >(408) 829-6718</p>
+                                          <p class="clear-space" style="font-family:sans-serif;font-size:14px;font-weight:normal;Margin-bottom:15px;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >baker@delighterr.com</p>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
                         </td>
                       </tr>
-                    </tbody>
-                  </table>
-                </td>
-              </tr>
-              <!-- END MAIN CONTENT AREA -->
-              </table>
-            <!-- END FOOTER -->
+                    </table>
+                    
+                  </td>
+                </tr>
+                <!-- END MAIN CONTENT AREA -->
+                </table>
 
-<!-- END CENTERED WHITE CONTAINER --></div>
-
-        </td>
-        <td></td>
-      </tr>
+                <table border="0" cellpadding="0" cellspacing="0" class="footer" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;clear:both;text-align:center;width:100%;background-color:transparent;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;margin-top:15px;margin-bottom:15px;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+                  <tbody>
+                    <tr>
+                      <td style="font-family:sans-serif;vertical-align:top;color:#999999;font-size:12px;text-align:center;" >
+                        <ul  class="terms clear-space" style="list-style-type:none;list-style-position:outside;list-style-image:none;font-family:sans-serif;font-weight:normal;Margin-bottom:15px;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;font-size:12px;text-align:left;" >
+                          <li style="list-style-position:outside !important;margin-left:5px;display:inline-block;" >&copy; Delighterr Inc 2016</li>
+                          <li style="list-style-position:outside !important;margin-left:5px;display:inline-block;" ><a href="http://www.delighterr.com/privacy" style="text-decoration:underline;color:#999999;font-size:12px;text-align:center;" >Privacy Policy</a></li>
+                          <li style="list-style-position:outside !important;margin-left:5px;display:inline-block;" ><a href="http://www.delighterr.com/terms" style="text-decoration:underline;color:#999999;font-size:12px;text-align:center;" >Terms</a></li>
+                        </ul>
+                      </td>
+                      <td style="font-family:sans-serif;vertical-align:top;color:#999999;font-size:12px;text-align:center;" >
+                        <ul class="social clear-space" style="list-style-type:none;list-style-position:outside;list-style-image:none;font-family:sans-serif;font-size:14px;font-weight:normal;Margin-bottom:15px;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;text-align:left;" >
+                          <li style="list-style-position:outside !important;margin-left:5px;display:inline-block;" ><a href="https://www.linkedin.com/company/delighterr-inc" target="_blank" style="text-decoration:underline;color:#999999;font-size:12px;text-align:center;" ><img src="https://dl.dropboxusercontent.com/u/62383170/linkedin.png" style="border-style:none;-ms-interpolation-mode:bicubic;max-width:100%;width:17px;" ></a></li>
+                          <li style="list-style-position:outside !important;margin-left:5px;display:inline-block;" ><a href="https://twitter.com/delighterrinc" target="_blank" style="text-decoration:underline;color:#999999;font-size:12px;text-align:center;" ><img src="https://dl.dropboxusercontent.com/u/62383170/twitter.png" style="border-style:none;-ms-interpolation-mode:bicubic;max-width:100%;width:17px;" ></a></li>
+                        </ul>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+          </td>
+        </tr>
+      </tbody>
     </table>
   </body>
 </html>

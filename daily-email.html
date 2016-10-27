@@ -5,399 +5,89 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Daily Email</title>
     <style>
-      /* -------------------------------------
-          GLOBAL RESETS
-      ------------------------------------- */
-      img {
-        border: none;
-        -ms-interpolation-mode: bicubic;
-        max-width: 100%; }
-      body {
-        background-color: #f6f6f6;
-        font-family: sans-serif;
-        -webkit-font-smoothing: antialiased;
-        font-size: 14px;
-        line-height: 1.4;
-        margin: 0;
-        padding: 0;
-        -ms-text-size-adjust: 100%;
-        -webkit-text-size-adjust: 100%; }
-      table {
-        border-collapse: separate;
-        background-color: white;
-        mso-table-lspace: 0pt;
-        mso-table-rspace: 0pt;
-        width: 100%; }
-        table td {
-          font-family: sans-serif;
-          font-size: 14px;
-          vertical-align: top; }
-      /* -------------------------------------
-          BODY & CONTAINER
-      ------------------------------------- */
-      .body {
-        background-color: #f6f6f6;
-        width: 100%; }
-      /* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
-      .container {
-        display: block;
-        margin: 0 auto !important;
-        /* makes it centered */
-        max-width: 680px;
-        width: auto !important;
-        width: 680px; }
-      /* This should also be a block element, so that it will fill 100% of the .container */
-      .content {
-        box-sizing: border-box;
-        display: block;
-        margin: 0 auto;
-        max-width: 680px; }
-      /* -------------------------------------
-          HEADER, FOOTER, MAIN
-      ------------------------------------- */
-      .main {
-        background: #fff;
-        border-radius: 3px;
-        width: 100%; }
-      .wrapper {
-        box-sizing: border-box; }
-      .footer {
-        clear: both;
-        padding-top: 10px;
-        margin: 0;
-        text-align: center;
-        width: 100%; }
-        .footer td,
-        .footer p,
-        .footer span,
-        .footer a {
-          color: #999999;
-          font-size: 12px;
-          text-align: center; }
-      /* -------------------------------------
-          TYPOGRAPHY
-      ------------------------------------- */
-      h1,
-      h2,
-      h3,
-      h4 {
-        color: #000000;
-        font-family: sans-serif;
-        font-weight: 400;
-        line-height: 1.4;
-        margin: 0;
-        margin-bottom: 30px; }
-      h1 {
-        font-size: 35px;
-        font-weight: 300;
-        text-align: center;
-        text-transform: capitalize; }
-      p,
-      ul,
-      ol {
-        font-family: sans-serif;
-        font-size: 14px;
-        font-weight: normal;
-        margin: 0;
-        margin-bottom: 15px; }
-        p li,
-        ul li,
-        ol li {
-          list-style-position: inside;
-          margin-left: 5px; }
-      a {
-        color: #3498db;
-        text-decoration: underline; }
-      /* -------------------------------------
-          BUTTONS
-      ------------------------------------- */
-      .btn {
-        box-sizing: border-box;
-        width: 100%; }
-        .btn table {
-          width: auto; }
-        .btn table td {
-          background-color: #ffffff;
-          border-radius: 5px;
-          text-align: center; }
-      .btn-primary table td {
-        background-color: #3498db; }
-      /* -------------------------------------
-          OTHER STYLES THAT MIGHT BE USEFUL
-      ------------------------------------- */
-      .last {
-        margin-bottom: 0; }
-      .first {
-        margin-top: 0; }
-      .align-center {
-        text-align: center; }
-      .align-right {
-        text-align: right; }
-      .align-left {
-        text-align: left; }
-      .clear {
-        clear: both; }
-      .mt0 {
-        margin-top: 0; }
-      .mb0 {
-        margin-bottom: 0; }
-      .preheader {
-        color: transparent;
-        display: none;
-        height: 0;
-        max-height: 0;
-        max-width: 0;
-        opacity: 0;
-        overflow: hidden;
-        mso-hide: all;
-        visibility: hidden;
-        width: 0; }
-      .powered-by a {
-        text-decoration: none; }
-      hr {
-        border: 0;
-        border-bottom: 1px solid #f6f6f6;
-        margin: 20px 0; }
-      /* -------------------------------------
-          RESPONSIVE AND MOBILE FRIENDLY STYLES
-      ------------------------------------- */
-      @media only screen and (max-width: 768px) {
-        table[class=body] h1 {
-          font-size: 28px !important;
-          margin-bottom: 10px !important; }
-        table[class=body] p,
-        table[class=body] ul,
-        table[class=body] ol,
-        table[class=body] td,
-        table[class=body] span,
-        table[class=body] a {
-          font-size: 16px !important; }
-        table[class=body] .wrapper,
-        table[class=body] .article {
-          padding: 10px !important; }
-        table[class=body] .content {
-          padding: 0 !important; }
-        table[class=body] .container {
-          padding: 0 !important;
-          width: 100% !important; }
-        table[class=body] .main {
-          border-left-width: 0 !important;
-          border-radius: 0 !important;
-          border-right-width: 0 !important; }
-        table[class=body] .btn table {
-          width: 100% !important; }
-        table[class=body] .btn a {
-          width: 100% !important; }
-        table[class=body] .img-responsive {
-          height: auto !important;
-          max-width: 100% !important;
-          width: auto !important; }
+      @media only screen and (min-width: 480px) {
+        .container {
+          padding: 10px !important;
         }
-
-        .table {
-          margin-bottom: 20px;
+        .content {
+          padding: 15px !important;
         }
-
-        .text-color {
-          color: #444;
-        }
-
-        .table td {
-          font-size: 13px;
-          font-style: italic;
-          color: #444;
-          border-bottom: 1px solid #ddd;
-          padding: 10px;
-        }
-
-        .table .active {
-          background-color: #f9f9f9;
-        }
-
-        .table td:first-child,
-        .header th:first-child {
-          padding: 10px;
-        }
-
-        .actions-title {
-          text-transform: capitalize;
-          font-size: 17px;
-          font-weight: bold;
-          font-style: italic;
-          color: #444;
-          text-align: left;
-          margin-bottom: 10px
-        }
-
-        .header {
-          background-color: #ffbdaa;
-        }
-        .header th {
-          padding: 10px;
-          color: white;
-          font-style: italic;
-          text-transform: capitalize;
-          font-size: 13px;
-          text-align: left;
-          border-bottom: 3px solid #fb805d;
-        }
-
-        .question {
-          font-size: 15px;
-          font-weight: bold;
-          margin: 0;
-          color: #333;
-        }
-
-        .question-desc {
-          font-size: 13px;
-        }
-
-        .contact p {
-          margin: 0;
-        }
-        .contact p:not(:first-child) {
-          font-size: 13px;
-        }
-        .logo {
-          text-align: center;
-          padding: 10px;
-        }
-
-        .table-recommend tr:nth-of-type(even) td {
-          padding: 0 0 4px;
-          font-size: 11px;
-          padding-left: 15px;
-        }
-        .table-recommend tr:nth-of-type(even) img {
-          width: 9px;
-        }
-        .table-recommend tr:nth-of-type(odd) td {
-          padding-bottom: 4px;
-          border: 0;
-        }
-
-        .terms {
-          font-size: 12px;
-        }
-
-        .terms, .social {
-          list-style: none }
-          .terms li, .social li {
-            display: inline-block; }
-
-        .footer {
-          background: transparent;
-          margin-top: 15px;
-          padding: 0;
-        }
-
-        .footer ul {
-          text-align: left;
-        }
-
-        .clear-space {
-          margin: 0;
-          padding: 0;
-        }
-
-        .social img {
-          width: 17px;
-        }
-        
-        .container,
-        .content,
         .wrapper {
-          padding: 0;
+          padding: 20px !important;
         }
-
         .welcome-msg {
-          font-size: 13px;
+          font-size: 14px;
         }
-
-        @media only screen and (min-width: 480px) {
-          .container {
-            padding: 10px;
-          }
-          .content {
-            padding: 15px;
-          }
-          .wrapper {
-            padding: 20px;
-          }
-          .welcome-msg {
-            font-size: 14px;
-          }
-        }
+      }
     </style>
   </head>
-  <body>
-    <table border="0" cellpadding="0" cellspacing="0">
-      <tbody style="background-color: #ebebeb">
+  <body style="background-color:#f6f6f6;font-family:sans-serif;-webkit-font-smoothing:antialiased;font-size:14px;line-height:1.4;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;background-color:white;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;" >
+      <tbody style="background-color:#ebebeb;" >
         <tr>
-          <td class="container" style="background-color: #ebebeb">
-            <div class="logo"><a href="http://www.delighterr.com" target="_blank">
-              <img src="https://dl.dropboxusercontent.com/u/62383170/logo-transparent.png" alt="" width="150px"></a>
+          <td class="container" style="background-color:#ebebeb;font-family:sans-serif;font-size:14px;vertical-align:top;display:block;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;max-width:680px;width:auto !important;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+            <div class="logo" style="text-align:center;padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" ><a href="http://www.delighterr.com" target="_blank" style="color:#3498db;text-decoration:underline;" >
+              <img src="https://dl.dropboxusercontent.com/u/62383170/logo-transparent.png" alt="" width="150px" style="border-style:none;-ms-interpolation-mode:bicubic;max-width:100%;" ></a>
             </div>
-            <div class="content">
-              <span class="preheader">Welcome to Delighterr. We automatically imported your top contacts and you are good to go.</span>
-              <table class="main">
+            <div class="content" style="box-sizing:border-box;display:block;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;max-width:680px;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+              <span class="preheader" style="color:transparent;display:none;height:0;max-height:0;max-width:0;opacity:0;overflow:hidden;mso-hide:all;visibility:hidden;width:0;" >Welcome to Delighterr. We automatically imported your top contacts and you are good to go.</span>
+              <table class="main" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;background-color:#fff;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;border-radius:3px;width:100%;" >
                 <tr>
-                  <td class="wrapper">
-                    <table border="0" cellpadding="0" cellspacing="0">
+                  <td class="wrapper" style="font-family:sans-serif;font-size:14px;vertical-align:top;box-sizing:border-box;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;background-color:white;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;" >
                       <tr>
-                        <td>
-                          <table border="0" cellpadding="0" cellspacing="0" class="box">
+                        <td style="font-family:sans-serif;font-size:14px;vertical-align:top;" >
+                          <table border="0" cellpadding="0" cellspacing="0" class="box" style="border-collapse:separate;background-color:white;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;" >
                             <tbody>
                               <tr>
-                                <td>
-                                  <p class="text-color">Dear Luke Gotzling,</p>
-                                  <p class="text-color welcome-msg">Good Morning, Here are planned and recommended actions to engage your contacts.</p>
+                                <td style="font-family:sans-serif;font-size:14px;vertical-align:top;" >
+                                  <p class="text-color" style="font-family:sans-serif;font-size:14px;font-weight:normal;margin-top:0;margin-bottom:15px;margin-right:0;margin-left:0;color:#444;" >Dear Luke Gotzling,</p>
+                                  <p class="text-color welcome-msg" style="font-family:sans-serif;font-weight:normal;margin-top:0;margin-bottom:15px;margin-right:0;margin-left:0;color:#444;font-size:13px;" >Good Morning, Here are planned and recommended actions to engage your contacts.</p>
                                 </td>
-                                <td>
-                                  <img src="https://dl.dropboxusercontent.com/u/62383170/sidebar.gif" alt="access plugin" width="80">
+                                <td style="font-family:sans-serif;font-size:14px;vertical-align:top;" >
+                                  <img src="https://dl.dropboxusercontent.com/u/62383170/sidebar.gif" alt="access plugin" width="80" style="border-style:none;-ms-interpolation-mode:bicubic;max-width:100%;" >
                                 </td>
                               </tr>
                             </tbody>
                           </table>
 
-                          <table border="0" cellpadding="0" cellspacing="0">
+                          <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;background-color:white;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;" >
                             <tbody>
                               <tr>
-                                <td>
-                                  <table border="0" cellpadding="2" cellspacing="0" class="table">
-                                    <caption class="actions-title">planned actions</caption>
+                                <td style="font-family:sans-serif;font-size:14px;vertical-align:top;" >
+                                  <table border="0" cellpadding="2" cellspacing="0" class="table" style="border-collapse:separate;background-color:white;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;margin-bottom:20px;" >
+                                    <caption class="actions-title" style="text-transform:capitalize;font-size:17px;font-weight:bold;font-style:italic;color:#444;text-align:left;margin-bottom:10px;" >planned actions</caption>
                                       <thead>
-                                        <tr class="header">
-                                          <th width="25%">contact name</th>
-                                          <th width="25%">due date</th>
-                                          <th width="25%">action type</th>
-                                          <th width="25%">actions</th>
+                                        <tr class="header" style="background-color:#ffbdaa;" >
+                                          <th width="25%" style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;color:white;font-style:italic;text-transform:capitalize;font-size:13px;text-align:left;border-bottom-width:3px;border-bottom-style:solid;border-bottom-color:#fb805d;" >contact name</th>
+                                          <th width="25%" style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;color:white;font-style:italic;text-transform:capitalize;font-size:13px;text-align:left;border-bottom-width:3px;border-bottom-style:solid;border-bottom-color:#fb805d;" >due date</th>
+                                          <th width="25%" style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;color:white;font-style:italic;text-transform:capitalize;font-size:13px;text-align:left;border-bottom-width:3px;border-bottom-style:solid;border-bottom-color:#fb805d;" >action type</th>
+                                          <th width="25%" style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;color:white;font-style:italic;text-transform:capitalize;font-size:13px;text-align:left;border-bottom-width:3px;border-bottom-style:solid;border-bottom-color:#fb805d;" >actions</th>
                                         </tr>
                                       </thead>
                                       <tbody>
                                       <tr>
-                                        <td  width="25%">luke.fabian@delighterr.onmicrosoft.com</td>
-                                        <td  width="25%">today</td>
-                                        <td  width="25%">follow up</td>
-                                        <td  width="25%">
-                                          <a href="mailto:someone@delighterr.com?subject=SUBJECT&body=BODY">start</a>
+                                        <td  width="25%" style="font-family:sans-serif;vertical-align:top;font-size:13px;font-style:italic;color:#444;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#ddd;padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >luke.fabian@delighterr.onmicrosoft.com</td>
+                                        <td  width="25%" style="font-family:sans-serif;vertical-align:top;font-size:13px;font-style:italic;color:#444;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#ddd;padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >today</td>
+                                        <td  width="25%" style="font-family:sans-serif;vertical-align:top;font-size:13px;font-style:italic;color:#444;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#ddd;padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >follow up</td>
+                                        <td  width="25%" style="font-family:sans-serif;vertical-align:top;font-size:13px;font-style:italic;color:#444;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#ddd;padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >
+                                          <a href="mailto:someone@delighterr.com?subject=SUBJECT&body=BODY" style="color:#3498db;text-decoration:underline;" >start</a>
                                         </td>
                                       </tr>
-                                      <tr class="active">
-                                        <td  width="25%">Luke Gotzling</td>
-                                        <td  width="25%">today</td>
-                                        <td  width="25%">follow up</td>
-                                        <td  width="25%">
-                                          <a href="mailto:someone@delighterr.com?subject=SUBJECT&body=BODY">start</a>
+                                      <tr class="active" style="background-color:#f9f9f9;" >
+                                        <td  width="25%" style="font-family:sans-serif;vertical-align:top;font-size:13px;font-style:italic;color:#444;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#ddd;padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >Luke Gotzling</td>
+                                        <td  width="25%" style="font-family:sans-serif;vertical-align:top;font-size:13px;font-style:italic;color:#444;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#ddd;padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >today</td>
+                                        <td  width="25%" style="font-family:sans-serif;vertical-align:top;font-size:13px;font-style:italic;color:#444;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#ddd;padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >follow up</td>
+                                        <td  width="25%" style="font-family:sans-serif;vertical-align:top;font-size:13px;font-style:italic;color:#444;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#ddd;padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >
+                                          <a href="mailto:someone@delighterr.com?subject=SUBJECT&body=BODY" style="color:#3498db;text-decoration:underline;" >start</a>
                                         </td>
                                       </tr>
                                       <tr>
-                                        <td  width="25%">Luke Gotzling</td>
-                                        <td  width="25%">today</td>
-                                        <td  width="25%">follow up</td>
-                                        <td  width="25%">
-                                          <a href="mailto:someone@delighterr.com?subject=SUBJECT&body=BODY">start</a>
+                                        <td  width="25%" style="font-family:sans-serif;vertical-align:top;font-size:13px;font-style:italic;color:#444;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#ddd;padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >Luke Gotzling</td>
+                                        <td  width="25%" style="font-family:sans-serif;vertical-align:top;font-size:13px;font-style:italic;color:#444;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#ddd;padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >today</td>
+                                        <td  width="25%" style="font-family:sans-serif;vertical-align:top;font-size:13px;font-style:italic;color:#444;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#ddd;padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >follow up</td>
+                                        <td  width="25%" style="font-family:sans-serif;vertical-align:top;font-size:13px;font-style:italic;color:#444;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#ddd;padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >
+                                          <a href="mailto:someone@delighterr.com?subject=SUBJECT&body=BODY" style="color:#3498db;text-decoration:underline;" >start</a>
                                         </td>
                                       </tr>
                                     </tbody>
@@ -405,57 +95,57 @@
                                 </td>
                               </tr>
                               <tr>
-                                <td>
-                                  <table border="0" cellpadding="3" cellspacing="0" class="table table-recommend">
-                                    <caption class="actions-title">Recommended Actions</caption>
+                                <td style="font-family:sans-serif;font-size:14px;vertical-align:top;" >
+                                  <table border="0" cellpadding="3" cellspacing="0" class="table table-recommend" style="border-collapse:separate;background-color:white;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;margin-bottom:20px;" >
+                                    <caption class="actions-title" style="text-transform:capitalize;font-size:17px;font-weight:bold;font-style:italic;color:#444;text-align:left;margin-bottom:10px;" >Recommended Actions</caption>
                                       <thead>
-                                        <tr class="header">
-                                          <th>contact name</th>
-                                          <th>due date</th>
-                                          <th>action type</th>
-                                          <th>actions</th>
+                                        <tr class="header" style="background-color:#ffbdaa;" >
+                                          <th style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;color:white;font-style:italic;text-transform:capitalize;font-size:13px;text-align:left;border-bottom-width:3px;border-bottom-style:solid;border-bottom-color:#fb805d;" >contact name</th>
+                                          <th style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;color:white;font-style:italic;text-transform:capitalize;font-size:13px;text-align:left;border-bottom-width:3px;border-bottom-style:solid;border-bottom-color:#fb805d;" >due date</th>
+                                          <th style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;color:white;font-style:italic;text-transform:capitalize;font-size:13px;text-align:left;border-bottom-width:3px;border-bottom-style:solid;border-bottom-color:#fb805d;" >action type</th>
+                                          <th style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;color:white;font-style:italic;text-transform:capitalize;font-size:13px;text-align:left;border-bottom-width:3px;border-bottom-style:solid;border-bottom-color:#fb805d;" >actions</th>
                                         </tr>
                                       </thead>
                                       <tbody>
                                       <tr>
-                                        <td>Luke Gotzling</td>
-                                        <td>today</td>
-                                        <td>follow up</td>
-                                        <td>
-                                          <a href="mailto:someone@delighterr.com?subject=SUBJECT&body=BODY">start</a>
+                                        <td style="font-family:sans-serif;vertical-align:top;font-size:13px;font-style:italic;color:#444;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#ddd;padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >Luke Gotzling</td>
+                                        <td style="font-family:sans-serif;vertical-align:top;font-size:13px;font-style:italic;color:#444;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#ddd;padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >today</td>
+                                        <td style="font-family:sans-serif;vertical-align:top;font-size:13px;font-style:italic;color:#444;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#ddd;padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >follow up</td>
+                                        <td style="font-family:sans-serif;vertical-align:top;font-size:13px;font-style:italic;color:#444;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#ddd;padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >
+                                          <a href="mailto:someone@delighterr.com?subject=SUBJECT&body=BODY" style="color:#3498db;text-decoration:underline;" >start</a>
                                         </td>
                                       </tr>
                                       <tr>
-                                        <td colspan="4">
-                                          <img src="https://dl.dropboxusercontent.com/u/62383170/business-intel.png">
+                                        <td colspan="4" style="font-family:sans-serif;vertical-align:top;font-size:13px;font-style:italic;color:#444;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#ddd;padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >
+                                          <img src="https://dl.dropboxusercontent.com/u/62383170/business-intel.png" style="border-style:none;-ms-interpolation-mode:bicubic;max-width:100%;" >
                                           <span>Email with subject Please send me docs is not open within 1 day</span>
                                         </td>
                                       </tr>
                                       <tr>
-                                        <td>Luke Gotzling</td>
-                                        <td>today</td>
-                                        <td>follow up</td>
-                                        <td>
-                                          <a href="mailto:someone@delighterr.com?subject=SUBJECT&body=BODY">start</a>
+                                        <td style="font-family:sans-serif;vertical-align:top;font-size:13px;font-style:italic;color:#444;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#ddd;padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >Luke Gotzling</td>
+                                        <td style="font-family:sans-serif;vertical-align:top;font-size:13px;font-style:italic;color:#444;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#ddd;padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >today</td>
+                                        <td style="font-family:sans-serif;vertical-align:top;font-size:13px;font-style:italic;color:#444;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#ddd;padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >follow up</td>
+                                        <td style="font-family:sans-serif;vertical-align:top;font-size:13px;font-style:italic;color:#444;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#ddd;padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >
+                                          <a href="mailto:someone@delighterr.com?subject=SUBJECT&body=BODY" style="color:#3498db;text-decoration:underline;" >start</a>
                                         </td>
                                       </tr>
                                       <tr>
-                                        <td colspan="4">
-                                          <img src="https://dl.dropboxusercontent.com/u/62383170/business-intel.png">
+                                        <td colspan="4" style="font-family:sans-serif;vertical-align:top;font-size:13px;font-style:italic;color:#444;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#ddd;padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >
+                                          <img src="https://dl.dropboxusercontent.com/u/62383170/business-intel.png" style="border-style:none;-ms-interpolation-mode:bicubic;max-width:100%;" >
                                           <span>Email with subject Please send me docs is not open within 1 day</span>
                                         </td>
                                       </tr>
                                       <tr>
-                                        <td>Luke Gotzling</td>
-                                        <td>today</td>
-                                        <td>follow up</td>
-                                        <td>
-                                          <a href="mailto:someone@delighterr.com?subject=SUBJECT&body=BODY">start</a>
+                                        <td style="font-family:sans-serif;vertical-align:top;font-size:13px;font-style:italic;color:#444;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#ddd;padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >Luke Gotzling</td>
+                                        <td style="font-family:sans-serif;vertical-align:top;font-size:13px;font-style:italic;color:#444;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#ddd;padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >today</td>
+                                        <td style="font-family:sans-serif;vertical-align:top;font-size:13px;font-style:italic;color:#444;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#ddd;padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >follow up</td>
+                                        <td style="font-family:sans-serif;vertical-align:top;font-size:13px;font-style:italic;color:#444;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#ddd;padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >
+                                          <a href="mailto:someone@delighterr.com?subject=SUBJECT&body=BODY" style="color:#3498db;text-decoration:underline;" >start</a>
                                         </td>
                                       </tr>
                                       <tr>
-                                        <td colspan="4">
-                                          <img src="https://dl.dropboxusercontent.com/u/62383170/business-intel.png">
+                                        <td colspan="4" style="font-family:sans-serif;vertical-align:top;font-size:13px;font-style:italic;color:#444;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#ddd;padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;" >
+                                          <img src="https://dl.dropboxusercontent.com/u/62383170/business-intel.png" style="border-style:none;-ms-interpolation-mode:bicubic;max-width:100%;" >
                                           <span>Email with subject Please send me docs is not open within 1 day</span>
                                         </td>
                                       </tr>
@@ -465,18 +155,18 @@
                               </tr>
 
                               <tr>
-                                <td>
-                                  <table border="0" cellpadding="0" cellspacing="0">
+                                <td style="font-family:sans-serif;font-size:14px;vertical-align:top;" >
+                                  <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;background-color:white;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;" >
                                     <tr>
-                                      <td>
-                                        <h2 class="question text-color">Got Questions or feedback</h2>
+                                      <td style="font-family:sans-serif;font-size:14px;vertical-align:top;" >
+                                        <h2 class="question text-color" style="font-family:sans-serif;line-height:1.4;font-size:15px;font-weight:bold;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;color:#333;" >Got Questions or feedback</h2>
                                       </td>
                                     </tr>
                                     <tr>
-                                      <td>
-                                        <p class="question-desc text-color">
+                                      <td style="font-family:sans-serif;font-size:14px;vertical-align:top;" >
+                                        <p class="question-desc text-color" style="font-family:sans-serif;font-weight:normal;margin-top:0;margin-bottom:15px;margin-right:0;margin-left:0;color:#444;font-size:13px;" >
                                           Love to hear your comments and questions. 
-                                          <a href="#">drop us a note</a>
+                                          <a href="#" style="color:#3498db;text-decoration:underline;" >drop us a note</a>
                                         </p>
                                       </td>
                                     </tr>
@@ -485,12 +175,12 @@
                               </tr>
 
                               <tr>
-                                <td>
-                                  <table border="0" cellpadding="0" cellspacing="0" style="margin-bottom: 15px;">
+                                <td style="font-family:sans-serif;font-size:14px;vertical-align:top;" >
+                                  <table border="0" cellpadding="0" cellspacing="0" style="margin-bottom:15px;border-collapse:separate;background-color:white;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;" >
                                     <tr>
-                                      <td>
-                                        <p style="margin: 0" class="text-color">Thanks and welcome again!</p>
-                                        <span class="text-color">baker</span>
+                                      <td style="font-family:sans-serif;font-size:14px;vertical-align:top;" >
+                                        <p  class="text-color" style="margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;font-family:sans-serif;font-size:14px;font-weight:normal;color:#444;" >Thanks and welcome again!</p>
+                                        <span class="text-color" style="color:#444;" >baker</span>
                                       </td>
                                     </tr>
                                   </table>
@@ -498,14 +188,14 @@
                               </tr>
 
                               <tr>
-                                <td>
-                                  <table border="0" cellpadding="0" cellspacing="0">
+                                <td style="font-family:sans-serif;font-size:14px;vertical-align:top;" >
+                                  <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;background-color:white;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;" >
                                     <tr>
-                                      <td class="contact">
-                                        <p class="text-color"><strong>Baker Nanduru</strong></p>
-                                        <p class="text-color">Founder & CEO</p>
-                                        <p class="text-color">(480) 829-6718</p>
-                                        <p class="text-color">baker@delighterr.com</p>
+                                      <td class="contact" style="font-family:sans-serif;font-size:14px;vertical-align:top;" >
+                                        <p class="text-color" style="font-family:sans-serif;font-size:14px;font-weight:normal;color:#444;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;" ><strong>Baker Nanduru</strong></p>
+                                        <p class="text-color" style="font-family:sans-serif;font-size:14px;font-weight:normal;color:#444;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;" >Founder & CEO</p>
+                                        <p class="text-color" style="font-family:sans-serif;font-size:14px;font-weight:normal;color:#444;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;" >(480) 829-6718</p>
+                                        <p class="text-color" style="font-family:sans-serif;font-size:14px;font-weight:normal;color:#444;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;" >baker@delighterr.com</p>
                                       </td>
                                     </tr>
                                   </table>
@@ -521,20 +211,20 @@
               </table>
 
 
-              <table border="0" cellpadding="0" cellspacing="0" class="footer">
+              <table border="0" cellpadding="0" cellspacing="0" class="footer" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;clear:both;margin-bottom:0;margin-right:0;margin-left:0;text-align:center;width:100%;background-color:transparent;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;margin-top:15px;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
                 <tbody>
                   <tr>
-                    <td>
-                      <ul style="list-style: none" class="terms clear-space">
-                        <li>© Delighterr Inc 2016</li>
-                        <li><a href="http://www.delighterr.com/privacy">Privacy Policy</a></li>
-                        <li><a href="http://www.delighterr.com/terms">Terms</a></li>
+                    <td style="font-family:sans-serif;vertical-align:top;color:#999999;font-size:12px;text-align:center;" >
+                      <ul  class="terms clear-space" style="list-style-type:none;list-style-position:outside;list-style-image:none;font-family:sans-serif;font-weight:normal;font-size:12px;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;text-align:left;" >
+                        <li style="list-style-position:inside;margin-left:5px;display:inline-block;" >© Delighterr Inc 2016</li>
+                        <li style="list-style-position:inside;margin-left:5px;display:inline-block;" ><a href="http://www.delighterr.com/privacy" style="text-decoration:underline;color:#999999;font-size:12px;text-align:center;" >Privacy Policy</a></li>
+                        <li style="list-style-position:inside;margin-left:5px;display:inline-block;" ><a href="http://www.delighterr.com/terms" style="text-decoration:underline;color:#999999;font-size:12px;text-align:center;" >Terms</a></li>
                       </ul>
                     </td>
-                    <td>
-                      <ul class="social clear-space" style="list-style: none">
-                        <li><a href="https://www.linkedin.com/company/delighterr-inc" target="_blank"><img src="https://dl.dropboxusercontent.com/u/62383170/linkedin.png"></a></li>
-                        <li><a href="https://twitter.com/delighterrinc" target="_blank"><img src="https://dl.dropboxusercontent.com/u/62383170/twitter.png"></a></li>
+                    <td style="font-family:sans-serif;vertical-align:top;color:#999999;font-size:12px;text-align:center;" >
+                      <ul class="social clear-space" style="list-style-type:none;list-style-position:outside;list-style-image:none;font-family:sans-serif;font-size:14px;font-weight:normal;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;text-align:left;" >
+                        <li style="list-style-position:inside;margin-left:5px;display:inline-block;" ><a href="https://www.linkedin.com/company/delighterr-inc" target="_blank" style="text-decoration:underline;color:#999999;font-size:12px;text-align:center;" ><img src="https://dl.dropboxusercontent.com/u/62383170/linkedin.png" style="border-style:none;-ms-interpolation-mode:bicubic;max-width:100%;width:17px;" ></a></li>
+                        <li style="list-style-position:inside;margin-left:5px;display:inline-block;" ><a href="https://twitter.com/delighterrinc" target="_blank" style="text-decoration:underline;color:#999999;font-size:12px;text-align:center;" ><img src="https://dl.dropboxusercontent.com/u/62383170/twitter.png" style="border-style:none;-ms-interpolation-mode:bicubic;max-width:100%;width:17px;" ></a></li>
                       </ul>
                     </td>
                   </tr>
